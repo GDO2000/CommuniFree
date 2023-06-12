@@ -1,6 +1,6 @@
 import Next from 'next';
 
-export default function SearchbButton () {
+export default function SearchButton () {
     return (
         <button>🔍</button>
     );
