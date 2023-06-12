@@ -8,10 +8,3 @@ export default function Feed(){
         <CreatePostButton/>
     )
 }
-
-export default function Feed(){
-    return(
-        <>
-        </>
-    )
-}
