@@ -4,6 +4,8 @@ import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateN
 import Feed from "../components/FeedPage/Feed/Feed"
 // import styles from './page.module.css'
 import Navbar from "../components/Navbar/Navbar";
+import SignUp from "./signup/signup";
+import SignIn from "./signin/signin"
 
 export default function Home() {
   return (
@@ -17,3 +19,4 @@ export default function Home() {
     </div>
   )
 }
+
