@@ -1,0 +1,11 @@
+
+
+.postGrid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin-top: 30px;
+    width:100%;
+    background-color: var(--lightgreen-colour);
+    border-radius:15px;
+}

@@ -37,7 +37,6 @@ body {
   justify-content: space-between;
   list-style: none;
   background-color: var(--lightgreen-colour);
-  position:absolute;
 }
 
 nav li:not(:last-child) {
@@ -45,17 +44,12 @@ nav li:not(:last-child) {
 }
 
 #logo {
-  /* border-radius: 50%;
-  box-shadow: 1px 1px 1px var(--dark-colour); */
   position:relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  /* right: 25%; */
 }
 
 #profile-pic {
-  /* border-radius: 50%;
-  box-shadow: 1px 1px 1px var(--dark-colour); */
   position: relative;
   padding-right: 30px;
   padding-top: 20px;
@@ -76,11 +70,6 @@ li {
   flex-direction: row;
 }
 
-.button {
-  background-color: var(--darkgreen-colour);
-  color: var(--light-colour);
-}
-
 .nav-search input[type="text"],
 .nav-search button {
   display: inline;
@@ -88,7 +77,6 @@ li {
   border: none;
   border-radius: 5px;
   position: relative;
-  /* left: 130%; */
   top: 30%;
 }
 

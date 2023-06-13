@@ -1,9 +1,10 @@
 import Next from "next"
+import './CreateNewPostButton.css'
 
 export default function CreatePostButton() {
     return(
     <div>
-        <h1>Feed</h1>
+
         <button className="button">Create Listing</button>
     </div>
     );
