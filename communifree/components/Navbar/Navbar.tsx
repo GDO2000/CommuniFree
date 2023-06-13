@@ -11,7 +11,6 @@ export default function Navbar(){
             <li>
             <Image src="/userprofile_image.png" alt = "User profile logo" id="profile-pic" width="80" height="80"/>
             </li>
-            <li>Log in</li>
         </ul>
     </nav>
     );
