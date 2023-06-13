@@ -13,6 +13,10 @@
   padding: 0; 
 }
 
+.main{
+  padding-top: 50px;
+}
+
 :root {
   --lightgreen-colour: #82ad8b;
   --light-colour: #F8F1FF;

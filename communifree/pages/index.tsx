@@ -7,11 +7,14 @@ import Navbar from "../components/Navbar/Navbar";
 
 export default function Home() {
   return (
-
-    <div>
-    <Navbar/>
-    <CreatePostButton/>
-    <Feed/>
-    </div>
+    <>
+      <header>
+      <Navbar/>
+      </header>
+      <main>
+      <CreatePostButton/>
+      <Feed/>
+      </main>
+    </>
   )
 }
