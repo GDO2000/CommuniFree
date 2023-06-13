@@ -25,13 +25,12 @@ body {
 
 .navbar {
   display: flex; 
-  flex-direction: row;
+  margin:auto;
   width: 95%;
   justify-content: space-between;
-  align-items: center;
   list-style: none;
   background-color: var(--lightgreen-colour);
-  position:fixed;
+  position:absolute;
 }
 
 nav li:not(:last-child) {
@@ -41,24 +40,26 @@ nav li:not(:last-child) {
 #logo {
   border-radius: 50%;
   box-shadow: 1px 1px 1px var(--dark-colour);
-  /* position: relative; */
-  /* right: 22%; */
+  position:relative;
+  right: 25%;
 }
 
 #profile-pic {
   border-radius: 50%;
   box-shadow: 1px 1px 1px var(--dark-colour);
-  /* position: absolute; */
-  /* left: 70%; */
+  position: relative;
+  left: 1080%;
   
 }
 
 ul {
   list-style-type: none;
+  display: flex;
 }
 
 li {
-  display: inline;
+  display: flex;
+  flex-direction: row;
 }
 
 .button {
@@ -68,10 +69,13 @@ li {
 
 .nav-search input[type="text"],
 .nav-search button {
+  display: inline;
   padding: 10px;
   border: none;
   border-radius: 5px;
-
+  position: relative;
+  left: 130%;
+  top: 30%;
 }
 
 .nav-search input[type="text"] {
