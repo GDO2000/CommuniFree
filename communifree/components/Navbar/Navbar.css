@@ -9,10 +9,12 @@ body {
 
 nav {
   display: flex; 
+  width: 95%;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   background-color: whitesmoke;
+  position:fixed;
 }
 
 nav li:not(:last-child) {
@@ -29,8 +31,8 @@ nav li:not(:last-child) {
 #profile-pic {
   border-radius: 50%;
   box-shadow: 1px 1px 1px black;
-  position: relative;
-  left: 739%;
+  position: absolute;
+  left: 100%;
   
 }
 
