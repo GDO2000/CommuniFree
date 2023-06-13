@@ -1,4 +1,5 @@
 import Next from 'next';
+import { MouseEventHandler } from 'react';
 type postObject = {
     title: string,
     description: string,
@@ -6,8 +7,8 @@ type postObject = {
     poster: string,
     [key: string]: any;
     }
-export default function SearchButton (props:{onClick:(array: Array<postObject>)=>void}) {
+export default function SearchButton (props:{handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;}) {
     return (
-        <button >🔍</button>
+        <button onClick={props.handleClick} >🔍</button>
     );
 }

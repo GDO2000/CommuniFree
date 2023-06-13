@@ -14,7 +14,7 @@ type postObject = {
 
 export default function SearchBar  () {
     const [search, setSearch] = useState<string>("");
-    let exampleArray = [{title: "Carrots", 
+    let exampleArray : Array<postObject> = [{title: "Carrots", 
         description: "good ol carrots", 
         location: "London", 
         poster: "Joe Bloggs"
@@ -84,7 +84,7 @@ export default function SearchBar  () {
         }];
 
 
-    function handleClick(exampleArray: Array<postObject>,) {
+    function handleClick() {
         let returnArray = [];
         
         for (let i = 0; i < exampleArray.length; i++) {
@@ -109,8 +109,8 @@ export default function SearchBar  () {
 
     return(
         <>
-        <TextInput onChange={handleChange}/>
-        <SearchButton onClick={handleClick}/>
+        <TextInput handleChange={handleChange}/>
+        <SearchButton handleClick={handleClick}/>
         </>
     );
 
