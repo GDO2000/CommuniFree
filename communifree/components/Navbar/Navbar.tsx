@@ -6,7 +6,7 @@ export default function Navbar(){
     <nav className= 'navbar'>
         <ul>
             <li>
-            <Image src='/Logo.png' alt = "Communifree logo" id="logo" width="80" height="80"/>
+            <Image src='/logo.png' alt = "Communifree logo" id="logo" width="150" height="80"/>
             </li>
             <li>
           <div className="nav-search">
@@ -15,7 +15,7 @@ export default function Navbar(){
           </div>
         </li>
             <li>
-            <Image src="/userprofile_image.png" alt = "User profile logo" id="profile-pic" width="80" height="80"/>
+            <Image src="/user.png" alt = "User profile logo" id="profile-pic" width="60" height="60"/>
             </li>
         </ul>
     </nav>

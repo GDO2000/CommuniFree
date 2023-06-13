@@ -8,7 +8,10 @@
 3. Create dummy data for a search box and use CSS to place it in the correct posistion ✅ 
 4. Create a CSS grid for the feed (and make it green)*/
 
-
+* { 
+  margin: 0; 
+  padding: 0; 
+}
 
 :root {
   --lightgreen-colour: #82ad8b;
@@ -25,8 +28,8 @@ body {
 
 .navbar {
   display: flex; 
-  margin:auto;
-  width: 95%;
+  margin-top:0px;
+  width: 100%;
   justify-content: space-between;
   list-style: none;
   background-color: var(--lightgreen-colour);
@@ -38,23 +41,30 @@ nav li:not(:last-child) {
 }
 
 #logo {
-  border-radius: 50%;
-  box-shadow: 1px 1px 1px var(--dark-colour);
+  /* border-radius: 50%;
+  box-shadow: 1px 1px 1px var(--dark-colour); */
   position:relative;
-  right: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* right: 25%; */
 }
 
 #profile-pic {
-  border-radius: 50%;
-  box-shadow: 1px 1px 1px var(--dark-colour);
+  /* border-radius: 50%;
+  box-shadow: 1px 1px 1px var(--dark-colour); */
   position: relative;
-  left: 1080%;
-  
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 }
 
 ul {
   list-style-type: none;
   display: flex;
+  align-items:center;
+  justify-content: space-between;
+  width:100%;
 }
 
 li {
@@ -74,7 +84,7 @@ li {
   border: none;
   border-radius: 5px;
   position: relative;
-  left: 130%;
+  /* left: 130%; */
   top: 30%;
 }
 

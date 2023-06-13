@@ -9,9 +9,7 @@ export default function Home() {
   return (
 
     <div>
-    <Navbar
-    ></Navbar>
-    <h1>CommuniFree</h1>
+    <Navbar/>
     <CreatePostButton/>
     <Feed/>
     </div>
