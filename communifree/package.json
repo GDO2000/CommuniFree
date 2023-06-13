@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "next start",
     "dev": "next dev",
     "build": "next build && next export",
     "nextstart": "next start",

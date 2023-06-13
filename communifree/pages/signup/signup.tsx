@@ -6,7 +6,7 @@ const SignUp = () => {
   const [password, setPassword] = useState(''); // State variable to store the password input value
 
   const handleSignUp = async () => {
-    const { user, error } = await supabase.auth.signUp({ // Function to sign up the user using Supabase
+    const { data, error } = await supabase.auth.signUp({ // Function to sign up the user using Supabase
       email,
       password,
     });
