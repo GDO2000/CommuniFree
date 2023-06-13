@@ -8,10 +8,11 @@ type postObject = {
     title: string,
     description: string,
     location: string,
-    poster: string
+    poster: string,
+    [key: string]: any;
     }
 
-export default function SearchBar () {
+export default function SearchBar  () {
     const [search, setSearch] = useState<string>("");
     let exampleArray = [{title: "Carrots", 
         description: "good ol carrots", 
@@ -83,10 +84,22 @@ export default function SearchBar () {
         }];
 
 
-    function handleClick(exampleArray: Array<postObject>) {
+    function handleClick(exampleArray: Array<postObject>,) {
         let returnArray = [];
+        
         for (let i = 0; i < exampleArray.length; i++) {
-            
+            const object = exampleArray[i];
+            for (const key in object) {
+                const propertyValue = object[key].toString().toLowerCase();
+                const searchTerm: string = search.toLowerCase();
+                const regexPattern: string = `.*${searchTerm.split('').join('.*')}.*`;
+                const regex: RegExp = new RegExp(regexPattern);
+                if (regex.test(propertyValue)) {
+                    returnArray.push(object);
+                    console.log(returnArray)
+                }
+                
+            }       
         }
     }
 
@@ -100,4 +113,5 @@ export default function SearchBar () {
         <SearchButton onClick={handleClick}/>
         </>
     );
+
 }
