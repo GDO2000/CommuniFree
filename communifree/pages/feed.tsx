@@ -9,9 +9,3 @@ export default function Feed(){
     )
 }
 
-export default function Feed(){
-    return(
-        <>
-        </>
-    )
-}
