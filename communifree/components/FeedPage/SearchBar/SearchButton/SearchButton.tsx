@@ -9,6 +9,6 @@ type postObject = {
     }
 export default function SearchButton (props:{handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;}) {
     return (
-        <button className="nav-search" onClick={props.handleClick} >🔍</button>
+        
     );
 }

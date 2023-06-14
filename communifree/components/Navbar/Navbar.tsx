@@ -1,5 +1,5 @@
 import Image from "next/image"
-import SearchBar from "../FeedPage/SearchBar"
+import SearchBar from "../FeedPage/SearchBar/searchBar"
 
 
 export default function Navbar(){

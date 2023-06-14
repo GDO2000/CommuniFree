@@ -110,8 +110,8 @@ export default function SearchBar  () {
 
     return(
         <>
-        <TextInput handleChange={handleChange}/>
-        <SearchButton handleClick={handleClick}/>
+        <input className="nav-search" onChange={handleChange}/>
+        <button className="nav-search" onClick={handleClick} >🔍</button>
         </>
     );
 

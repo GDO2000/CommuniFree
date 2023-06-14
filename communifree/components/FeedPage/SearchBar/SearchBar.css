@@ -1,20 +1,22 @@
-.nav-search input[type="text"],
-.nav-search button {
+.nav-search, input {
+  width:500px;
+  background-color: white;
   display: inline;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   top: 30%;
 }
 
-.nav-search input[type="text"] {
+.nav-search {
   width: 250px;
   margin-right: 10px;
 }
 
-.nav-search button {
+button.nav-search {
   background-color: var(--darkgreen-colour);
   color: var(--light-colour);
   cursor: pointer;
+  width: 50px;
 }
