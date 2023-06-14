@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import supabase from '../../../utils/supabaseClient';
+import supabase from '../src/app/utils/supabaseClient'
 
 const SignUp = () => {
   const [email, setEmail] = useState(''); // State variable to store the email input value
   const [password, setPassword] = useState(''); // State variable to store the password input value
 
-  const handleSignUp = async () => {
-    const { data, error } = await supabase.auth.signUp({ // Function to sign up the user using Supabase
+  const handleSignIn = async () => {
+    const { data, error } = await supabase.auth.signInWithPassword({ // Function to sign up the user using Supabase
       email,
       password,
     });
@@ -21,7 +21,7 @@ const SignUp = () => {
 
   return (
     <div>
-      <h1>Sign Up</h1>
+      <h1>Sign In</h1>
       <input
         type="email"
         value={email}
@@ -34,7 +34,7 @@ const SignUp = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button onClick={handleSignUp}>Sign Up</button>
+      <button onClick={handleSignIn}>Sign Up</button>
     </div>
   );
 };
