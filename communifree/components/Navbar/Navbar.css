@@ -1,11 +1,92 @@
-body {
-  background-color: black;
+/* Plan
+1. Change the page to the correct colours ✅
+2. Make sure the logo and the profile-pic are in the same size+posistion when the browser changes size
+  a. get logo in correct position
+  b. get search bar in correct position
+  c. get profile in correct position
+  d. all of above should stay in fixed position when resizing screen
+3. Create dummy data for a search box and use CSS to place it in the correct posistion ✅ 
+4. Create a CSS grid for the feed (and make it green)*/
+
+* { 
+  margin: 0; 
+  padding: 0; 
 }
 
-nav {
-  background-color: black;
+.main{
+  padding-top: 50px;
+}
+
+:root {
+  --lightgreen-colour: #82ad8b;
+  --light-colour: #F8F1FF;
+  --dark-colour: #061301;
+  --accent-colour: #FF9B42;
+  --darkgreen-colour: #0B5351;
+}
+
+
+body {
+  background-color: var(--light-colour);
+}
+
+.navbar {
+  display: flex; 
+  margin-top:0px;
+  width: 100%;
+  justify-content: space-between;
+  list-style: none;
+  background-color: var(--lightgreen-colour);
+}
+
+nav li:not(:last-child) {
+  margin-right: 1rem;
 }
 
 #logo {
-  position: center;
+  position:relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#profile-pic {
+  position: relative;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  width:100%;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-search input[type="text"],
+.nav-search button {
+  display: inline;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  top: 30%;
+}
+
+.nav-search input[type="text"] {
+  width: 250px;
+  margin-right: 10px;
+}
+
+.nav-search button {
+  background-color: var(--darkgreen-colour);
+  color: var(--light-colour);
+  cursor: pointer;
 }

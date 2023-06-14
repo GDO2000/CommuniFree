@@ -1,7 +1,20 @@
-import Post from "./Post"
+import Post from "./Post";
+import './Feed.css';
 
 export default function Feed () {
     return (
-    <Post/>
+    <div className ='postGrid'>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+        <Post/>
+    </div>
     )
 }
