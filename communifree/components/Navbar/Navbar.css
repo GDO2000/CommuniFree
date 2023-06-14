@@ -1,33 +1,11 @@
+body {
+  background-color: black;
+}
+
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #90B693;
-    padding: 10px;
-  }
-  
-  #logo {
-    margin-right: 10px;
-    list-style-type: none;
-  }
-  
-  nav ul {
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  nav li {
-    margin-right: 15px;
-  }
-  
-  nav {
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
+  background-color: black;
+}
+
+#logo {
+  position: center;
+}
