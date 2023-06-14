@@ -14,7 +14,9 @@ type postObject = {
     }
 
 export default function SearchBar  () {
+    //stores string of text input in search bar
     const [search, setSearch] = useState<string>("");
+    //dummy data
     let exampleArray : Array<postObject> = [{title: "Carrots", 
         description: "good ol carrots", 
         location: "London", 
