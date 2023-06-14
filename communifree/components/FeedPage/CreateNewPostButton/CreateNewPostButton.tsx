@@ -15,7 +15,6 @@ export default function CreatePostButton() {
     
     return (
         <div>
-            <h1>Feed</h1>
             <button className="modalButton button" onClick={handleClick}>Create Listing</button>
         
 

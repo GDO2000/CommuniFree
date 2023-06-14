@@ -69,24 +69,3 @@ li {
   display: flex;
   flex-direction: row;
 }
-
-.nav-search input[type="text"],
-.nav-search button {
-  display: inline;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  position: relative;
-  top: 30%;
-}
-
-.nav-search input[type="text"] {
-  width: 250px;
-  margin-right: 10px;
-}
-
-.nav-search button {
-  background-color: var(--darkgreen-colour);
-  color: var(--light-colour);
-  cursor: pointer;
-}

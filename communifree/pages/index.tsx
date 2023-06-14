@@ -1,5 +1,4 @@
 import Next from "next";
-import Document, { Head, Html, Main, NextScript } from 'next/document';
 import Image from 'next/image'
 import './index.css'
 import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton";
