@@ -1,11 +1,25 @@
-import Next from "next"
+
+import Next from "next";
+import React, { useState } from "react";
+import Modal from "./Modal";
 import './CreateNewPostButton.css'
 
 export default function CreatePostButton() {
-    return(
-    <div>
+    const [modalOpen, setModalOpen] = useState(false);
+    
+    function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+        setModalOpen(true);
 
-        <button className="button">Create Listing</button>
-    </div>
+    }
+    
+    
+    return (
+        <div>
+            <h1>Feed</h1>
+            <button className="modalButton button" onClick={handleClick}>Create Listing</button>
+        
+
+        {modalOpen && <Modal setOpenModal={setModalOpen} />}
+        </div>
     );
 }
