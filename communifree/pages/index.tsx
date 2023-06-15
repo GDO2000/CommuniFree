@@ -10,25 +10,41 @@ import Filters from '../components/FeedPage/Filters/Filters'
 export default function Home() {
   return (
   <>
+    {/* Start of head section */}
     <head>
+      {/* Preconnect to Google Fonts API */}
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      {/* Load the Montserrat font styles */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
     </head>
+
+    {/* Start of main content */}
     <>
+      {/* Header section */}
       <header>
-      <Navbar/>
+        {/* Include the Navbar component */}
+        <Navbar/>
       </header>
+
+      {/* Main section */}
       <main>
-      <div>
-      <Filters/>
-      </div>
-      <div className='buttonAndFeed'>
-      <CreatePostButton/>
-      <FeedPage/>
-      </div>
+        <div>
+          {/* Include the Filters component */}
+          <Filters/>
+        </div>
+
+        <div className='buttonAndFeed'>
+          {/* Include the CreatePostButton component */}
+          <CreatePostButton/>
+          {/* Include the FeedPage component */}
+          <FeedPage/>
+        </div>
       </main>
     </>
-    </>
+
+  {/* Closing tags */}
+  </>
   )
 }
+
