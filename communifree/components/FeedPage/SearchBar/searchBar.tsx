@@ -88,7 +88,7 @@ export default function SearchBar  () {
 
 
     function handleClick() {
-        let returnArray = [];
+        let returnArray: Array<postObject> = [];
         
         for (let i = 0; i < exampleArray.length; i++) {
             const object = exampleArray[i];

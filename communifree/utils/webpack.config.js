@@ -6,6 +6,8 @@ module.exports = {
   module: {
     rules: [
       // Other rules...
+
+      // Rule for handling TypeScript files
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
@@ -15,10 +17,10 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js'], // Specify file extensions for module resolution
   },
 
   plugins: [
-    new Dotenv(), // Load environment variables from .env file
+    new Dotenv(), // Load environment variables from .env file using Dotenv plugin
   ],
 };
