@@ -20,7 +20,7 @@ Final project BC14
 
 <br/>
 
-## **Introduction 🥕	**
+## Introduction 🥕	
 
 
 Welcome to our GitHub page! We are the Boat Rockers': a dynamic group of six full stack developers from the prestigious School of Code. We embarked on an exciting five-week group project that resulted in the creation of our innovative and cutting-edge app, Communifree.
