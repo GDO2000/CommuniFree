@@ -5,8 +5,8 @@ Final project BC14
 
 ## List of Contents
 
-
-1. [The Team](#The-Team)
+1. [Tech Stack](#tech-stack)
+2. [The Team](#The-Team)
 
 
 <br/>
@@ -15,7 +15,7 @@ Final project BC14
 
 <br/>
 
-Tech Stack
+## **_Tech Stack🖥️_**
 
 
 ![Alt text](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
