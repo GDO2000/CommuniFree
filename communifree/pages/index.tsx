@@ -6,6 +6,8 @@ import FeedPage from '../components/FeedPage/Feed/Feed'
 import '../components/Navbar/Navbar.css'
 import Navbar from "../components/Navbar/Navbar";
 import Filters from '../components/FeedPage/Filters/Filters'
+import { createClient } from '@supabase/supabase-js'
+
 
 export default function Home() {
   return (
