@@ -3,6 +3,10 @@ Final project BC14
 
 <br />
 
+---
+
+<br/>
+
 ## List of Contents
 
 1. [Tech Stack](#tech-stack)
