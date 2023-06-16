@@ -88,20 +88,34 @@ export default function SearchBar  () {
         }];
 
 
-    function handleClick() {
-        let returnArray = [];
-        
-        for (let i = 0; i < exampleArray.length; i++) {
-            const object = exampleArray[i];
-            for (const key in object) {
+        function handleClick() {
+            let returnArray: Array<postObject> = [];
+            // Declare an empty array `returnArray` to store the matching objects.
+          
+            for (let i = 0; i < exampleArray.length; i++) {
+              // Loop through each element in `exampleArray`.
+              const object = exampleArray[i];
+              // Get the current object from `exampleArray`.
+          
+              for (const key in object) {
+                // Loop through each property of the current object.
                 const propertyValue = object[key].toString().toLowerCase();
+                // Get the string value of the current property and convert it to lowercase.
                 const searchTerm: string = search.toLowerCase();
+                // Get the lowercase value of the `search` variable.
                 const regexPattern: string = `.*${searchTerm.split('').join('.*')}.*`;
+                // Create a regex pattern to match any characters between the characters of `searchTerm`.
                 const regex: RegExp = new RegExp(regexPattern);
+                // Create a regular expression object using the regex pattern.
+          
                 if (regex.test(propertyValue)) {
-                    returnArray.push(object);
-                    console.log(returnArray)
+                  // Check if the property value matches the regex pattern.
+                  returnArray.push(object);
+                  // If there is a match, add the current object to the `returnArray`.
+                  console.log(returnArray);
+                  // Log the `returnArray` to the console.
                 }
+
                 
             }       
         }
@@ -110,15 +124,19 @@ export default function SearchBar  () {
     function handleChange(e: {target: {value:string;}}) {
         setSearch(e.target.value);
     }
+    // Update the `search` state variable with the value of the input field.
 
     return(
         <>
         <div id="searchfield">
         <input className="search-bar" placeholder='What food are you looking to save?' onChange={handleChange}/>
+          {/* Render an input field with the `nav-search` class and bind the `handleChange` function to the `onChange` event. */}
         <button className="search-button" onClick={handleClick}><Image src="/searchimg.bmp" alt="magnifying glass image" width="50" height="40"/></button>
+          {/* Render a button with the `nav-search` class and bind the `handleClick` function to the `onClick` event. */}
         </div>
         
         </>
     );
 
 }
+
