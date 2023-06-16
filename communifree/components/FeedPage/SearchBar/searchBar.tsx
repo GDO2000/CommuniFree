@@ -4,6 +4,7 @@ import {useState} from 'react';
 import TextInput from './TextInput/TextInput';
 import SearchButton from './SearchButton/SearchButton';
 import "./SearchBar.css"
+import Image from 'next/image';
 
 type postObject = {
     title: string,
@@ -114,21 +115,28 @@ export default function SearchBar  () {
                   console.log(returnArray);
                   // Log the `returnArray` to the console.
                 }
-              }
-            }
-          }
-          
-          function handleChange(e: { target: { value: string } }) {
-            setSearch(e.target.value);
-          }
-          // Update the `search` state variable with the value of the input field.
-          
-          return (
-            <>
-              <input className="nav-search" onChange={handleChange} />
-              {/* Render an input field with the `nav-search` class and bind the `handleChange` function to the `onChange` event. */}
-              <button className="nav-search" onClick={handleClick}>🔍</button>
-              {/* Render a button with the `nav-search` class and bind the `handleClick` function to the `onClick` event. */}
-            </>
-          );
-          
+
+                
+            }       
+        }
+    }
+
+    function handleChange(e: {target: {value:string;}}) {
+        setSearch(e.target.value);
+    }
+    // Update the `search` state variable with the value of the input field.
+
+    return(
+        <>
+        <div id="searchfield">
+        <input className="search-bar" placeholder='What food are you looking to save?' onChange={handleChange}/>
+          {/* Render an input field with the `nav-search` class and bind the `handleChange` function to the `onChange` event. */}
+        <button className="search-button" onClick={handleClick}><Image src="/searchimg.bmp" alt="magnifying glass image" width="50" height="40"/></button>
+          {/* Render a button with the `nav-search` class and bind the `handleClick` function to the `onClick` event. */}
+        </div>
+        
+        </>
+    );
+
+}
+

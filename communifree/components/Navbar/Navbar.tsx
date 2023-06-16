@@ -1,5 +1,6 @@
 import Image from "next/image"
 import SearchBar from "../FeedPage/SearchBar/searchBar"
+import Link from 'next/link'
 
 
 export default function Navbar(){
@@ -13,7 +14,9 @@ export default function Navbar(){
               <SearchBar/>
             </li>
             <li>
-            <Image src="/user.png" alt = "User profile logo" id="profile-pic" width="60" height="60"/>
+            <Link href="/signin">
+            <Image src="/SigninLogo.bmp" alt = "User profile logo" id="profile-pic" width="70" height="70"/>
+            </Link>
             </li>
         </ul>
     </nav>
