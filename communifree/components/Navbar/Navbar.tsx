@@ -1,5 +1,5 @@
 import Image from "next/image"
-import SearchBar from "../feedPage/SearchBar/searchBar"
+import SearchBar from "../FeedPage/SearchBar/searchBar"
 import Link from 'next/link'
 
 

@@ -1,11 +1,11 @@
 import Next from "next";
 import Image from 'next/image'
 import './index.css'
-import CreatePostButton from "../components/feedPage/CreateNewPostButton/CreateNewPostButton";
-import FeedPage from '../components/feedPage/Feed/Feed'
+import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton";
+import FeedPage from '../components/FeedPage/Feed/Feed'
 import '../components/Navbar/Navbar.css'
 import Navbar from "../components/Navbar/Navbar";
-import Filters from '../components/feedPage/Filters/Filters'
+import Filters from '../components/FeedPage/Filters/Filters'
 import { createClient } from '@supabase/supabase-js'
 
 
