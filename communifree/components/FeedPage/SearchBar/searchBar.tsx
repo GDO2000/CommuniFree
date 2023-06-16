@@ -4,6 +4,7 @@ import {useState} from 'react';
 import TextInput from './TextInput/TextInput';
 import SearchButton from './SearchButton/SearchButton';
 import "./SearchBar.css"
+import Image from 'next/image';
 
 type postObject = {
     title: string,
@@ -112,8 +113,11 @@ export default function SearchBar  () {
 
     return(
         <>
-        <input className="nav-search" onChange={handleChange}/>
-        <button className="nav-search" onClick={handleClick} >🔍</button>
+        <div id="searchfield">
+        <input className="search-bar" placeholder='What food are you looking to save?' onChange={handleChange}/>
+        <button className="search-button" onClick={handleClick}><Image src="/searchimg.bmp" alt="magnifying glass image" width="50" height="40"/></button>
+        </div>
+        
         </>
     );
 

@@ -15,7 +15,7 @@ export default function Navbar(){
             </li>
             <li>
             <Link href="/signin">
-            <Image src="/user.png" alt = "User profile logo" id="profile-pic" width="60" height="60"/>
+            <Image src="/SigninLogo.bmp" alt = "User profile logo" id="profile-pic" width="70" height="70"/>
             </Link>
             </li>
         </ul>

@@ -29,7 +29,6 @@ export default function SignIn() {
     <Auth
       supabaseClient={supabase}
       appearance={{ theme: ThemeSupa }}
-      providers={['google', 'facebook', 'twitter']}
     />
   )
 }
