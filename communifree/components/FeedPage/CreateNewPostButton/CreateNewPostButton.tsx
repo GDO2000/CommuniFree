@@ -1,7 +1,7 @@
 
 import Next from "next";
 import React, { useState } from "react";
-import Modal from "./Modal";
+import Modal from "./CreateListing/CreateListingTextForm/CreateListingTextFor";
 import './CreateNewPostButton.css'
 
 export default function CreatePostButton() {
@@ -11,6 +11,10 @@ export default function CreatePostButton() {
         setModalOpen(true);
 
     }
+    function handleDeleteClick(){
+        setModalOpen(false)
+    }
+    
     
     
     return (
@@ -18,7 +22,7 @@ export default function CreatePostButton() {
             <button className="modalButton button" onClick={handleClick}>Create Listing</button>
         
 
-        {modalOpen && <Modal setOpenModal={setModalOpen} />}
+        {modalOpen && <Modal setOpenModal={setModalOpen} handleDeleteClick={handleDeleteClick} />}
         </div>
     );
 }
