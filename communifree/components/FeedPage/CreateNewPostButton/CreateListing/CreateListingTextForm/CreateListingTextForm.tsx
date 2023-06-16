@@ -105,9 +105,6 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     }];
     
     const [dummyData, setdummyData] = useState(exampleArray)
-    useEffect(() => {
-        console.log(dummyData);
-      }, [dummyData]);
       
 
     async function handlePostClick(){
@@ -119,15 +116,9 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         }
         let newData = [...dummyData,obj]
         setdummyData(newData)
-        console.log(dummyData )
-        console.log(obj )
         setOpenModal(false);
     }
     
-
-
-
-
 
     return(
         <div className="modalBackground">
@@ -137,12 +128,6 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
             Contact:<input onChange={handleContactChange} />
             <DeleteButton setOpenModal={setOpenModal} handleDeleteClick={handleDeleteClick}/>
             <PostButton setOpenModal={setOpenModal} handlePostClick={handlePostClick} />
-
-
-
-
-
-
 
 
         </div>

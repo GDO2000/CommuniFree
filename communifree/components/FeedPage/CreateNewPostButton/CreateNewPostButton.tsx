@@ -1,7 +1,7 @@
 
 import Next from "next";
 import React, { useState } from "react";
-import Modal from "./CreateListing/CreateListingTextForm/CreateListingTextFor";
+import Modal from "./CreateListing/CreateListingTextForm/CreateListingTextForm";
 import './CreateNewPostButton.css'
 
 export default function CreatePostButton() {
