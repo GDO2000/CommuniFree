@@ -1,7 +1,7 @@
 import Next from "next";
 import Image from 'next/image'
 import './index.css'
-import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton;
+import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton";
 
 import Feed from "../components/FeedPage/Feed/Feed";
 import '../components/Navbar/Navbar.css';
