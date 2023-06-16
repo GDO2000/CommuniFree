@@ -1,5 +1,6 @@
 import Image from "next/image"
 import SearchBar from "../FeedPage/SearchBar/searchBar";
+
 import Link from 'next/link'
 import "./Navbar.css"
 
