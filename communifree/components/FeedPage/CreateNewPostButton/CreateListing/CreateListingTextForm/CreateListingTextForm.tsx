@@ -2,6 +2,7 @@ import { useState } from "react";
 import PostButton from "../../PostButton/PostButton";
 import DeleteButton from "../../DeleteButton/DeleteButton";
 import { useEffect } from "react";
+import './CreateListingTextForm.css'
 interface ModalProps {
     setOpenModal: (open: boolean) => void;
     handleDeleteClick: () => void;
@@ -122,13 +123,18 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
 
     return(
         <div className="modalBackground">
-            Title:<input onChange={handleTitleChange}/>
-            Description:<input onChange={handleDescriptionChange} />
-            Condition:<input onChange={handleConditionChange} />
-            Contact:<input onChange={handleContactChange} />
+            <h1>Create a listing </h1>
+            <br></br>
+            <br></br>
+        <form>
+            Give your listing a title :<input placeholder="E.G 10 Carrots" type = "text" onChange={handleTitleChange}/>
+            Describe your product:<textarea placeholder="E.G Ready for collection" rows= {5} cols= {131} onChange={handleDescriptionChange} />
+            What is the condition of your product:<input placeholder="Select an option" type = "list" onChange={handleConditionChange} />
+
+            Please enter a contact number or email address:<input placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} />
             <DeleteButton setOpenModal={setOpenModal} handleDeleteClick={handleDeleteClick}/>
             <PostButton setOpenModal={setOpenModal} handlePostClick={handlePostClick} />
-
+        </form> 
 
         </div>
     )

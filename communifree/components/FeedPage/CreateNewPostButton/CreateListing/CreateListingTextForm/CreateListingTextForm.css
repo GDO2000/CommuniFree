@@ -1,0 +1,21 @@
+.modalBackground {
+    width: 70vw;
+    height: 70vh;
+    background-color: #0b5351;
+    position: fixed;
+    display: flex-column;
+    justify-content: center;
+    align-items: center;
+    flex: 50%;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #f8f1ff;
+    border: none;
+    border-radius: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    }
+
+  

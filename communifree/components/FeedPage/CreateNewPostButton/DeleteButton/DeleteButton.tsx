@@ -8,7 +8,7 @@ export default function DeleteButton ({ handleDeleteClick }:ModalProps){
     return(
         <>
         <button onClick={handleDeleteClick}> 
-            Delete Post Draft
+            Cancel
             </button>
         </>
     )

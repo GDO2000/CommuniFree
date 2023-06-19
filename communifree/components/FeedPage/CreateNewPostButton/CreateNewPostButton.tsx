@@ -19,9 +19,9 @@ export default function CreatePostButton() {
     
     return (
         <div>
+            
             <button className="modalButton button" onClick={handleClick}>Create Listing</button>
-        
-
+           
         {modalOpen && <Modal setOpenModal={setModalOpen} handleDeleteClick={handleDeleteClick} />}
         </div>
     );
