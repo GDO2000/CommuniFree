@@ -58,6 +58,14 @@ export default function Filters(){
                 <input type="checkbox" id="dairy-free"/>
                 <label htmlFor = "dairy-free">Dairy Free</label>
             </div>
+
+            <div className="slidecontainer">
+                <h3>Distance</h3>
+            <input type="range" min="1" max="100" value="50" className="slider" id="myRange"/>
+            </div>
+
+            
+
         </div>
     )
 }
