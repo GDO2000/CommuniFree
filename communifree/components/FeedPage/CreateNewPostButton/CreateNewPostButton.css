@@ -1,4 +1,3 @@
-/* 
 .button {
   appearance: button;
   backface-visibility: hidden;
@@ -17,8 +16,8 @@
   outline: none;
   overflow: hidden;
   padding: 0 5px;
-  /* position: static; */
-  /* text-align: center;
+   position: static; 
+   text-align: center;
   text-transform: none;
   transform: translateZ(0);
   transition: all .2s,box-shadow .08s ease-in;
