@@ -1,12 +1,15 @@
 import { useState } from "react";
-import PostButton from "../../PostButton/PostButton";
-import DeleteButton from "../../DeleteButton/DeleteButton";
+// import PostButton from "../../PostButton/PostButton";
+// import DeleteButton from "../../DeleteButton/DeleteButton";
 import { useEffect } from "react";
 import './CreateListingTextForm.css'
+import Head from "next/head";
+
 interface ModalProps {
     setOpenModal: (open: boolean) => void;
     handleDeleteClick: () => void;
 }
+
 type postObject = {
     title: string,
     description: string,
@@ -121,25 +124,36 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     }
     
 
+    // interface ModalProps {
+    //     setOpenModal: (open: boolean) => void;
+    //     handleDeleteClick: () => void;
+    // }
+
     return(
+        <div id='popup'>
+        
+        <Head><link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet"></link>
+        </Head>
+
         <div className="modalBackground">
-            <h1>Create a listing </h1>
-            <br></br>
+            <h1 id="createListingH1">Create a listing:</h1>
             <br></br>
         <form>
-            Give your listing a title :<input placeholder="E.G 10 Carrots" type = "text" onChange={handleTitleChange}/>
-            Describe your product:<textarea placeholder="E.G Ready for collection" rows= {5} cols= {131} onChange={handleDescriptionChange} />
-            What is the condition of your product:<input placeholder="Select an option" type = "list" onChange={handleConditionChange} />
-
-            Please enter a contact number or email address:<input placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} />
-            <DeleteButton setOpenModal={setOpenModal} handleDeleteClick={handleDeleteClick}/>
-            <PostButton setOpenModal={setOpenModal} handlePostClick={handlePostClick} />
+            <label>Give your listing a title :</label>
+            <input placeholder="e.g. 10 Carrots" type = "text" onChange={handleTitleChange}/><br></br>
+            <label>Describe your product:</label>
+            <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
+            <label>What is the condition of your product:</label>
+            <input placeholder="Select an option" type = "list" onChange={handleConditionChange} /><br></br>
+            <label>Please enter a contact number or email address:</label>
+            <input placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} /><br></br>
+            <button id= 'cancelbutton' onClick={handleDeleteClick} /*setOpenModal={setOpenModal}*/>Cancel</button>
+            <button id= 'postbutton' /*setOpenModal={setOpenModal}*/ onClick={handlePostClick}>Post!</button>
         </form> 
-
+        </div>
         </div>
     )
-
-
-
 
 }

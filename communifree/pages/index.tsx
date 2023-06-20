@@ -17,11 +17,12 @@ export default function Home() {
     {/* Start of head section */}
     <head>
       {/* Preconnect to Google Fonts API */}
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
       {/* Load the Montserrat font styles */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
     </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
 
     {/* Start of main content */}
     <>
