@@ -30,9 +30,11 @@ import './CreateNewPostButton.css'
 
 export default function CreatePostButton() {
     const [modalOpen, setModalOpen] = useState(false);
-
+    const [buttonVisible, setButtonVisible] = useState(true)
+    
     function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
         setModalOpen(true);
+        setButtonVisible(false)
     }
 
     function handleDeleteClick() {
@@ -41,11 +43,11 @@ export default function CreatePostButton() {
 
     return (
         <div>
-            <button className="modalButton button" onClick={handleClick}>
-                Create Listing
-            </button>
-
-            {modalOpen && (
+            
+            {buttonVisible &&<button className="modalButton button" onClick={handleClick}>Create Listing</button>}
+           
+        {modalOpen && <Modal setOpenModal={setModalOpen} handleDeleteClick={handleDeleteClick} />}
+<!--             {modalOpen && (
                 <div className="modal-overlay">
                     <div className="modal-content">
                         <span
@@ -62,7 +64,7 @@ export default function CreatePostButton() {
                         />
                     </div>
                 </div>
-            )}
+            )} -->
         </div>
     );
   }

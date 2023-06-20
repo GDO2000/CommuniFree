@@ -7,7 +7,5 @@ import Link from 'next/link';
 
 export default function BacktoFeedButton () {
        return (
-                <Link href= "/feed"></Link>
-                
-                
-                )}
+       <Link href= "/feed"></Link>   
+              )}
