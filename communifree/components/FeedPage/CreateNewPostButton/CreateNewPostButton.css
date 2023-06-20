@@ -25,6 +25,11 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+
+  width: 150px;
+  
+}
+
   width: 150px; */
 /* }
 
@@ -46,6 +51,7 @@
     align-items: center;
     z-index: 1; 
   }
+
 
   .modal-content {
     width: 100%;
