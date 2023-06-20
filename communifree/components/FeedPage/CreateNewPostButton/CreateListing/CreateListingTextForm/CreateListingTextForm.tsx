@@ -142,13 +142,13 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
             <br></br>
         <form>
             <label>Give your listing a title :</label>
-            <input placeholder="e.g. 10 Carrots" type = "text" onChange={handleTitleChange}/><br></br>
+            <input className="createpostinput" placeholder="e.g. 10 Carrots" type = "text" onChange={handleTitleChange}/><br></br>
             <label>Describe your product:</label>
             <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
             <label>What is the condition of your product:</label>
-            <input placeholder="Select an option" type = "list" onChange={handleConditionChange} /><br></br>
+            <input className="createpostinput" placeholder="Select an option" type = "list" onChange={handleConditionChange} /><br></br>
             <label>Please enter a contact number or email address:</label>
-            <input placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} /><br></br>
+            <input className="createpostinput" placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} /><br></br>
             <button id= 'cancelbutton' onClick={handleDeleteClick} /*setOpenModal={setOpenModal}*/>Cancel</button>
             <button id= 'postbutton' /*setOpenModal={setOpenModal}*/ onClick={handlePostClick}>Post!</button>
         </form> 
