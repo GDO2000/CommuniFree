@@ -1,5 +1,8 @@
 import pg from "pg";
 
+const databaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const APIkey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
+
 const connectionString = process.env.NEXT_PUBLIC_SUPABASE_URL;
 
 if (!connectionString) {
@@ -7,5 +10,10 @@ if (!connectionString) {
 } 
 
 export const pool = new pg.Pool({
-  connectionString
+
+  connectionString: databaseURL
 });
+
+// pool.on('connect', (client) => {
+//   client.query(`SET apikey TO ${APIkey}`);
+// });

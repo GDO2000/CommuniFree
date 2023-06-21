@@ -10,4 +10,4 @@ const supabaseKey: string = process.env.NEXT_PUBLIC_SUPABASE_KEY || '';
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseKey);
 
 // Export the Supabase client instance as the default export of the module
-export default supabase;
+export default supabase; 
