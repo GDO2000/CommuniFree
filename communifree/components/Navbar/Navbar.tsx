@@ -2,7 +2,7 @@ import Image from "next/image"
 import SearchBar from "../FeedPage/SearchBar/searchBar";
 import Link from 'next/link'
 import "./Navbar.css"
-import {useSession, setSession} from '../../backend/db/session'
+import {useSession} from '../../backend/db/session'
 import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
 import supabase from "../../utils/supabaseClient";
 
