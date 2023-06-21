@@ -14,7 +14,10 @@ export default function Navbar(){
     function handleIconClick(){
         if (!session){
             router.push('/signin')
+
+
         }
+
     }
 
     async function signOut(){
