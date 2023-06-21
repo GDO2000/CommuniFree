@@ -59,6 +59,16 @@ nav li:not(:last-child) {
   height: 60;
 
 }
+#profile-pic:hover{
+  cursor:pointer; 
+  position: relative;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width : 60;
+  height: 60;
+
+}
 
 ul {
   list-style-type: none;
