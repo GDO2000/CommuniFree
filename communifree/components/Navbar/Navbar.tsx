@@ -35,7 +35,7 @@ export default function Navbar(){
             </li>
             <li>
             <Image  onClick={handleIconClick} src="/SigninLogo.bmp" alt = "User profile logo" id="profile-pic" width="70" height="70"/>
-            {session && <button onClick={signOut}>Sign out</button>}
+            {session && <button id="signOutButton" onClick={signOut}>Sign out</button>}
             </li>
         </ul>
     </nav>
