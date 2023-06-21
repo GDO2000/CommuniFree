@@ -10,7 +10,7 @@ export default function Navbar(){
     
     function handleIconClick(){
         if (!session){
-            router.push('/signin.tsx')
+            router.push('/signin')
 
         }
         else {
