@@ -47,7 +47,7 @@ export default function CreatePostButton() {
             {buttonVisible &&<button className="modalButton button" onClick={handleClick}>Create Listing</button>}
            
         {modalOpen && <Modal setOpenModal={setModalOpen} handleDeleteClick={handleDeleteClick} />}
-<!--             {modalOpen && (
+             {modalOpen && (
                 <div className="modal-overlay">
                     <div className="modal-content">
                         <span
@@ -57,14 +57,14 @@ export default function CreatePostButton() {
                             &times;
                         </span>
 
-                        {/* add your modal content here */}
+                      
                         <Modal
                             setOpenModal={setModalOpen}
                             handleDeleteClick={handleDeleteClick}
                         />
                     </div>
                 </div>
-            )} -->
+            )}
         </div>
     );
   }
