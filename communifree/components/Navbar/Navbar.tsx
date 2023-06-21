@@ -2,23 +2,28 @@ import Image from "next/image"
 import SearchBar from "../FeedPage/SearchBar/searchBar";
 import Link from 'next/link'
 import "./Navbar.css"
-import {useSession} from '../../backend/db/session'
+import {useSession, setSession} from '../../backend/db/session'
+import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
+import supabase from "../../utils/supabaseClient";
+
 
 
 export default function Navbar(){
-    const { session, router } = useSession();
+    let { session, router } = useSession();
     
     function handleIconClick(){
         if (!session){
-            router.push('/signin.tsx')
-
-        }
-        else {
-            alert("You're already signed in")
+            router.push('/signin')
         }
     }
 
+    async function signOut(){
+        await supabase.auth.signOut()
 
+
+
+    }
+    
     return(
     <nav className= 'navbar'>
         <ul>
@@ -30,6 +35,7 @@ export default function Navbar(){
             </li>
             <li>
             <Image  onClick={handleIconClick} src="/SigninLogo.bmp" alt = "User profile logo" id="profile-pic" width="70" height="70"/>
+            {session && <button onClick={signOut}>Sign out</button>}
             </li>
         </ul>
     </nav>
