@@ -35,15 +35,15 @@ fetchPosts()
 }, [] )
 
      return (
-    <div className ='postGrid'>
+    <>
         {fetchError && (<p>{fetchError}</p>)}
         {posts && (
-            <div className= 'posts'>
+            <div className= 'postGrid'>
                 {posts.map(post => (
                  <Post key={post.id} post={post}/>   
                 ))}
             </div>
         )}
-    </div>
+    </>
     )
 }
