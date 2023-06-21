@@ -3,7 +3,6 @@ import Image from 'next/image'
 import './index.css'
 import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton";
 import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
-import { SessionContextProvider } from '@supabase/auth-helpers-react'
 
 import Feed from "../components/FeedPage/Feed/Feed";
 import '../components/Navbar/Navbar.css';
