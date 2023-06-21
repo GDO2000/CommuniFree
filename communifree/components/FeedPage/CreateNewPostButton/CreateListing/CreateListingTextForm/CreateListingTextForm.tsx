@@ -145,8 +145,14 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
             <input className="createpostinput" placeholder="e.g. 10 Carrots" type = "text" onChange={handleTitleChange}/><br></br>
             <label>Describe your product:</label>
             <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
-            <label>What is the condition of your product:</label>
-            <input className="createpostinput" placeholder="Select an option" type = "list" onChange={handleConditionChange} /><br></br>
+            <label htmlFor= "condition">What is the condition of your product:</label> <br></br>
+            <select name = "condition" id = "condition">
+            {/* <input list="condition" className="createpostinput" placeholder="Select an option" onChange={handleConditionChange} /><br></br> */}
+         <option value="option1">Excellent</option>
+         <option value="option2">Good</option>
+         <option value="option3">Poor</option>
+             </select>
+<br></br>
             <label>Please enter a contact number or email address:</label>
             <input className="createpostinput" placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} /><br></br>
             <button id= 'cancelbutton' onClick={handleDeleteClick} /*setOpenModal={setOpenModal}*/>Cancel</button>
@@ -154,6 +160,6 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         </form> 
         </div>
         </div>
-    )
+    );
 
-}
+};
