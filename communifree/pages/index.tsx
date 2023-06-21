@@ -1,4 +1,4 @@
-import Next from "next";
+import Next from "next"; 
 import Image from 'next/image'
 import './index.css'
 import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton";

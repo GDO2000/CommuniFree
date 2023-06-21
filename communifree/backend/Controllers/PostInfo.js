@@ -40,6 +40,7 @@ export async function deletePostByID(req, res) {
     const post = await postIDModel.deletePostByPostID(post_id);
     res.status(200).json({sucess: true, payload: post});
 }
+
 export async function createNewPost(req, res) {
     let postData = req.body
     const newPost = await createNewPost(postData);

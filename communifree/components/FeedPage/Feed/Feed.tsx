@@ -23,20 +23,27 @@ useEffect(() => {
 
     if (data){
         console.log(data)
-        setPosts(posts => [...data])
+        setPosts(data)
         console.log(posts)
 
         setFetchError(null)
     }
-    }
-    
+}
+
 fetchPosts()
 
 }, [] )
 
      return (
     <div className ='postGrid'>
-        <Post/>
+        {fetchError && (<p>{fetchError}</p>)}
+        {posts && (
+            <div className= 'posts'>
+                {posts.map(post => (
+                 <Post key={post.id} post={post}/>   
+                ))}
+            </div>
+        )}
     </div>
     )
 }
