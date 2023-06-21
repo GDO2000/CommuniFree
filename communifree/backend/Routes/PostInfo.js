@@ -32,4 +32,4 @@ postInfoRoutes.get("/post_info:location", postInfoController.getPostByLocation);
 
 postInfoRoutes.delete("/post_info:post_id", postInfoController.deletePostByID);
 
-postInfoRoutes.post("/post_info", postInfoController.createNewPost)
+postInfoRoutes.post("/post_info", postInfoController.createNewPost);
