@@ -6,8 +6,8 @@ import supabase from '../../../utils/supabaseClient'
 
 export default function Feed () {
 
-const [fetchError, setFetchError] = useState(null)
-const [posts, setPosts] = useState([])
+const [fetchError, setFetchError] = useState<string | null>(null)
+const [posts, setPosts] = useState<any[]>([])
 
 useEffect(() => {
     const fetchPosts = async() => {
@@ -17,7 +17,7 @@ useEffect(() => {
 
     if (error){
         setFetchError('Could not fetch any posts')
-        setPosts(null)
+        setPosts([])
         console.log(error)
     }
 
