@@ -1,6 +1,13 @@
 import './Filters.css'
+import { useState } from 'react';
  
 export default function Filters(){
+    const [sliderValue, setSliderValue] = useState<number>(50);
+
+    const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSliderValue(Number(event.target.value));
+    };
+    
     return(
         <div className='filters'>
             <h3>Category</h3><br></br>
@@ -62,7 +69,7 @@ export default function Filters(){
             <div className="slidecontainer">
                 <h3>Distance</h3>
                 <br></br>
-            <input type="range" min="1" max="100" value="50" className="slider" id="myRange"/>
+            <input type="range" min="1" max="100" value={sliderValue} className="slider" id="myRange" onChange={handleSliderChange}/>
             </div>
 
             
