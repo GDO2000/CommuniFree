@@ -19,7 +19,7 @@ export default function SearchBar() {
   const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
-    const fetchSearchResults = async () => {
+    const fetchPosts = async () => {
       const { data, error } = await supabase
         .from('post_info')
         .select();
@@ -32,14 +32,15 @@ export default function SearchBar() {
 
       if (data) {
         console.log(data);
+        console.log('that was data ^');
         setPosts(data);
         console.log(posts);
-
+        console.log('that was the posts ^');
         setFetchError(null);
       }
-    };
+    }
 
-    fetchSearchResults();
+    fetchPosts();
   }, []);
 
   function handleClick() {
@@ -60,6 +61,7 @@ export default function SearchBar() {
         }
       }       
     }
+    return returnArray;
   }
 
   function handleChange(e: {target: {value:string;}}) {
