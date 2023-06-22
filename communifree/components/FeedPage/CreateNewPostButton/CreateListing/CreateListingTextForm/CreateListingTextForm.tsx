@@ -1,9 +1,10 @@
-import { useState } from "react";
-// import PostButton from "../../PostButton/PostButton";
-// import DeleteButton from "../../DeleteButton/DeleteButton";
-import { useEffect } from "react";
+import { useState } from "react"
 import './CreateListingTextForm.css'
 import Head from "next/head";
+import supabase from "../../../../../utils/supabaseClient";
+import {v4 as uuidv4} from 'uuid';
+
+
 
 interface ModalProps {
     setOpenModal: (open: boolean) => void;
@@ -22,112 +23,83 @@ type postObject = {
 
 export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     const [title, setTitle] = useState("");
+    const [location, setLocation] = useState("");
     const [description, setDescription] = useState("");
+    const [image, setImage] = useState("");
     const [condition, setCondition] = useState("");
     const [contact, setContact] = useState("");
+    const [formError, setFormError] = useState(null)
   
     function handleTitleChange(e: {target: {value:string;}}) {
         setTitle(e.target.value);
+        console.log(`The title is ${title}`)
+    }
+    function handleLocationChange(e: {target: {value:string;}}) {
+        setLocation(e.target.value);
+        console.log(`The location is ${location}`)
     }
     function handleDescriptionChange(e: {target: {value:string;}}) {
         setDescription(e.target.value);
+        console.log(`The description is ${description}`)
+    }
+    
+    function handleImageChange(e: {target: {value:string;}}) {
+        setImage(e.target.value);
+        console.log(`The image url is ${image}`)
     }
     function handleConditionChange(e: {target: {value:string;}}) {
         setCondition(e.target.value);
+        console.log(`The condition is ${condition}`)
     }
     function handleContactChange(e: {target: {value:string;}}) {
         setContact(e.target.value);
+        console.log(`The contact details are ${contact}`)
     }
-    let exampleArray : Array<postObject> = [{
-    title: "Carrots", 
-    description: "good ol carrots", 
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Apples",
-    description: "Crisp and juicy apples",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Bananas",
-    description: "Yellow and potassium-rich bananas",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Oranges potatoes",
-    description: "Citrusy oranges and potatoes",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Strawberries",
-    description: "Sweet and succulent strawberries",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Grapes",
-    description: "Juicy grapes in a variety of colors",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Tomatoes",
-    description: "Vibrant and flavorful tomatoes",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Lettuce",
-    description: "Crisp and refreshing lettuce",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Potatoes",
-    description: "Versatile and hearty potatoes",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Cucumbers",
-    description: "Cool and hydrating cucumbers",
-    contact: "0121",
-    condition: "Good"
-    }];
-    
-    const [dummyData, setdummyData] = useState(exampleArray)
       
 
-    async function handlePostClick(){
-        let obj : postObject ={
+    const handlePostClick = async(e)=>{
+        let post_id = uuidv4();
+        e.preventDefault()
+        if(!title || !location || !description || !image || !condition || !contact){
+            setFormError("Please fill in all the fields")
+            return
+        }
+
+
+        
+        let postData ={
             title,
+            location,
             description,
+            image,
             condition,
             contact,
         }
-        let newData = [...dummyData,obj]
-        setdummyData(newData)
+
+    const { data, error } = await supabase
+    .from('post_info')
+    .insert([{post_id, title, location, description, image, condition, contact}]);
+
+    
+    
+    if (error) {
+        console.log(error);
+        // Handle the error, e.g., show an error message
+        setFormError("Please fill in all the fields")
+    } 
+    if(data) {
+        console.log('Data inserted successfully:', data);
+        setFormError(null)
+        // Handle the successful insertion, e.g., show a success message
+      }
+
+
+
         setOpenModal(false);
     }
     
 
-    // interface ModalProps {
-    //     setOpenModal: (open: boolean) => void;
-    //     handleDeleteClick: () => void;
-    // }
+  
 
     return(
         <div id='popup'>
@@ -140,26 +112,35 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         <div className="modalBackground">
             <h1 id="createListingH1">Create a listing:</h1>
             <br></br>
-        <form>
+        <div>
             <label>Give your listing a title :</label>
             <input className="createpostinput" placeholder="e.g. 10 Carrots" type = "text" onChange={handleTitleChange}/><br></br>
+            
+            <label>What is your post code?</label>
+            <input className="createpostinput" placeholder="NR17 2EX" type = "text" onChange={handleLocationChange}/><br></br>
+            
             <label>Describe your product:</label>
             <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
+            
+            <label>Please provide an image url for your product:</label>
+            <input className="createpostinput" placeholder="http://your_url_here" type='text' onChange={handleImageChange} /><br></br>
+            
             <label htmlFor= "condition">What is the condition of your product:</label> <br></br>
-            <select name = "condition" id = "condition">
-            {/* <input list="condition" className="createpostinput" placeholder="Select an option" onChange={handleConditionChange} /><br></br> */}
-         <option value="option1">Excellent</option>
-         <option value="option2">Good</option>
-         <option value="option3">Poor</option>
+            <select onChange={handleConditionChange} name = "condition" id = "condition">
+                <option value="Fresh / long shelf life">Fresh / long shelf life</option>
+                <option value="Needs to be eaten within a week">Needs to be eaten within a week</option>
+                <option value="Needs to be eaten in the next few days">Needs to be eaten in the next few days</option>
+                <option value="Needs to be eaten today!">Needs to be eaten today!</option>
              </select>
 <br></br>
             <label>Please enter a contact number or email address:</label>
             <input className="createpostinput" placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} /><br></br>
+            
             <button id= 'cancelbutton' onClick={handleDeleteClick} /*setOpenModal={setOpenModal}*/>Cancel</button>
             <button id= 'postbutton' /*setOpenModal={setOpenModal}*/ onClick={handlePostClick}>Post!</button>
-        </form> 
+        </div> 
         </div>
         </div>
     );
 
-};
+}
