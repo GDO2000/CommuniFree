@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import PostButton from "../../PostButton/PostButton";
-// import DeleteButton from "../../DeleteButton/DeleteButton";
 import { useEffect } from "react";
 import './CreateListingTextForm.css'
 import Head from "next/head";
@@ -28,87 +26,20 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
   
     function handleTitleChange(e: {target: {value:string;}}) {
         setTitle(e.target.value);
+        console.log(`The title is ${title}`)
     }
     function handleDescriptionChange(e: {target: {value:string;}}) {
         setDescription(e.target.value);
+        console.log(`The description is ${description}`)
     }
     function handleConditionChange(e: {target: {value:string;}}) {
         setCondition(e.target.value);
+        console.log(`The condition is ${condition}`)
     }
     function handleContactChange(e: {target: {value:string;}}) {
         setContact(e.target.value);
+        console.log(`The contact details are ${contact}`)
     }
-    let exampleArray : Array<postObject> = [{
-    title: "Carrots", 
-    description: "good ol carrots", 
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Apples",
-    description: "Crisp and juicy apples",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Bananas",
-    description: "Yellow and potassium-rich bananas",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Oranges potatoes",
-    description: "Citrusy oranges and potatoes",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Strawberries",
-    description: "Sweet and succulent strawberries",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Grapes",
-    description: "Juicy grapes in a variety of colors",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Tomatoes",
-    description: "Vibrant and flavorful tomatoes",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Lettuce",
-    description: "Crisp and refreshing lettuce",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Potatoes",
-    description: "Versatile and hearty potatoes",
-    contact: "0121",
-    condition: "Good"
-    },
-    
-    {
-    title: "Cucumbers",
-    description: "Cool and hydrating cucumbers",
-    contact: "0121",
-    condition: "Good"
-    }];
-    
-    const [dummyData, setdummyData] = useState(exampleArray)
       
 
     async function handlePostClick(){
