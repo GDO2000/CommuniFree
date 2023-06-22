@@ -55,10 +55,7 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     }
     
 
-    // interface ModalProps {
-    //     setOpenModal: (open: boolean) => void;
-    //     handleDeleteClick: () => void;
-    // }
+  
 
     return(
         <div id='popup'>
@@ -77,11 +74,11 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
             <label>Describe your product:</label>
             <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
             <label htmlFor= "condition">What is the condition of your product:</label> <br></br>
-            <select name = "condition" id = "condition">
-            {/* <input list="condition" className="createpostinput" placeholder="Select an option" onChange={handleConditionChange} /><br></br> */}
-         <option value="option1">Excellent</option>
-         <option value="option2">Good</option>
-         <option value="option3">Poor</option>
+            <select onChange={handleConditionChange} name = "condition" id = "condition">
+         <option value="Fresh / long shelf life">Fresh / long shelf life</option>
+         <option value="Needs to be eaten within a week">Needs to be eaten within a week</option>
+         <option value="Needs to be eaten in the next few days">Needs to be eaten in the next few days</option>
+         <option value="Needs to be eaten today!">Needs to be eaten today!</option>
              </select>
 <br></br>
             <label>Please enter a contact number or email address:</label>
