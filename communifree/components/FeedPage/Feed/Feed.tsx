@@ -8,7 +8,8 @@ import supabase from '../../../utils/supabaseClient'
 export default function Feed ({setSearch, handleClick,posts,setPosts}) {
 
 
-const [fetchError, setFetchError] = useState(null)
+const [fetchError, setFetchError] = useState<string | null>(null);
+
 
 useEffect(() => {
     const fetchPosts = async() => {
