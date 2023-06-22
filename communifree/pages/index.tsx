@@ -77,7 +77,7 @@ export default function Home(){
     {/* Header section */}
     <header>
       {/* Include the Navbar component */}
-      <Navbar handleClick={handleClick}  setPosts={setPosts} setSearch={setSearch}/>
+      <Navbar handleClick={handleClick}  setPosts={setPosts} setSearch={setSearch as Dispatch<SetStateAction<string>>}/>
     </header>
 
     {/* Main section */}
