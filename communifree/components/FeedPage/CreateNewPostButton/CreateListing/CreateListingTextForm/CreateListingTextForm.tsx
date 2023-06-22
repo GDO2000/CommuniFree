@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import './CreateListingTextForm.css'
 import Head from "next/head";
 import supabase from "../../../../../utils/supabaseClient";
+import {v4 as uuidv4} from 'uuid';
+
+
 
 interface ModalProps {
     setOpenModal: (open: boolean) => void;
@@ -54,7 +57,16 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     }
       
 
-    async function handlePostClick(){
+    const handlePostClick = async(e)=>{
+        let post_id = uuidv4();
+        e.preventDefault()
+        if(!title || !location || !description || !image || !condition || !contact){
+            setFormError("Please fill in all the fields")
+            return
+        }
+
+
+        
         let postData ={
             title,
             location,
@@ -66,17 +78,18 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
 
     const { data, error } = await supabase
     .from('post_info')
-    .insert([postData]);
+    .insert([{post_id, title, location, description, image, condition, contact}]);
 
-// title: postData.title, location: postData.location, description: postData.description, image: postData.image, condition: postData.condition, contact: postData.contact
+    
     
     if (error) {
-        console.error(error);
+        console.log(error);
         // Handle the error, e.g., show an error message
-        console.log('Error:', error);
-    } else {
+        setFormError("Please fill in all the fields")
+    } 
+    if(data) {
         console.log('Data inserted successfully:', data);
-        console.log('Data:', data);
+        setFormError(null)
         // Handle the successful insertion, e.g., show a success message
       }
 
@@ -99,7 +112,7 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         <div className="modalBackground">
             <h1 id="createListingH1">Create a listing:</h1>
             <br></br>
-        <form>
+        <div>
             <label>Give your listing a title :</label>
             <input className="createpostinput" placeholder="e.g. 10 Carrots" type = "text" onChange={handleTitleChange}/><br></br>
             
@@ -125,7 +138,7 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
             
             <button id= 'cancelbutton' onClick={handleDeleteClick} /*setOpenModal={setOpenModal}*/>Cancel</button>
             <button id= 'postbutton' /*setOpenModal={setOpenModal}*/ onClick={handlePostClick}>Post!</button>
-        </form> 
+        </div> 
         </div>
         </div>
     );
