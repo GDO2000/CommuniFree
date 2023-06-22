@@ -3,6 +3,7 @@ import Next from "next";
 import React, { useState } from "react";
 import Modal from "./CreateListing/CreateListingTextForm/CreateListingTextForm";
 import './CreateNewPostButton.css'
+import { useRouter } from "next/router";
 
 // export default function CreatePostButton() {
 //     const [modalOpen, setModalOpen] = useState(false);
@@ -31,14 +32,19 @@ import './CreateNewPostButton.css'
 export default function CreatePostButton() {
     const [modalOpen, setModalOpen] = useState(false);
     const [buttonVisible, setButtonVisible] = useState(true)
+    const router = useRouter()
     
     function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
         setModalOpen(true);
-        setButtonVisible(false)
+        setButtonVisible(false);
+        
     }
 
     function handleDeleteClick() {
         setModalOpen(false);
+        
+        router.reload();
+
     }
 
     return (
