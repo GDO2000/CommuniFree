@@ -13,66 +13,59 @@ type postObject = {
   [key: string]: any;
 };
 
-export default function SearchBar() {
-  const [fetchError, setFetchError] = useState(null);
-  const [posts, setPosts] = useState([]);
-  const [search, setSearch] = useState<string>("");
+interface Post {
+  [key: string]: string | number; // Adjust the types based on your actual data structure
+}
+
+export default function SearchBar({setSearch, handleClick,setPosts}) {
+  const [fetchError, setFetchError] = useState<string | null>("");
+
+  
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const { data, error } = await supabase
-        .from('post_info')
-        .select();
+      try {
+        const { data, error } = await supabase
+          .from("post_info")
+          .select();
 
-      if (error) {
-        setFetchError('Could not fetch any posts');
-        setPosts(null);
-        console.log(error);
-      }
+        if (error) {
+          throw new Error("Could not fetch any posts");
+        }
 
-      if (data) {
-        console.log(data);
-        console.log('that was data ^');
-        setPosts(data);
-        console.log(posts);
-        console.log('that was the posts ^');
+        setPosts(data || []);
         setFetchError(null);
+      } catch (error) {
+        console.log(error);
+        setFetchError("Could not fetch any posts");
       }
-    }
+    };
 
     fetchPosts();
   }, []);
 
-  function handleClick() {
-    let returnArray: Array<postObject> = [];
+  
 
-    for (let i = 0; i < posts.length; i++) {
-      const object = posts[i];
-
-      for (const key in object) {
-        const propertyValue = object[key].toString().toLowerCase();
-        const searchTerm: string = search.toLowerCase();
-        const regexPattern: string = `.*${searchTerm.split('').join('.*')}.*`;
-        const regex: RegExp = new RegExp(regexPattern);
-
-        if (regex.test(propertyValue)) {
-          returnArray.push(object);
-          console.log(returnArray);
-        }
-      }       
-    }
-    return returnArray;
-  }
-
-  function handleChange(e: {target: {value:string;}}) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setSearch(e.target.value);
   }
 
   return (
     <>
       <div id="searchfield">
-        <input className="search-bar" placeholder='What food are you looking to save?' onChange={handleChange}/>
-        <button className="search-button" onClick={handleClick}><Image src="/searchimg.bmp" alt="magnifying glass image" width="50" height="40"/></button>
+        <input
+          className="search-bar"
+          placeholder="What food are you looking to save?"
+          onChange={handleChange}
+        />
+        <button className="search-button" onClick={handleClick}>
+          <img
+            src="/searchimg.bmp"
+            alt="magnifying glass image"
+            width="50"
+            height="40"
+          />
+        </button>
       </div>
     </>
   );

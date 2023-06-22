@@ -4,10 +4,11 @@ import {useState, useEffect} from 'react';
 import React from "react";
 import supabase from '../../../utils/supabaseClient'
 
-export default function Feed () {
+
+export default function Feed ({setSearch, handleClick,posts,setPosts}) {
 
 const [fetchError, setFetchError] = useState(null)
-const [posts, setPosts] = useState([])
+
 
 useEffect(() => {
     const fetchPosts = async() => {
@@ -40,7 +41,7 @@ fetchPosts()
         {posts && (
             <div className= 'postGrid'>
                 {posts.map(post => (
-                 <Post key={post.id} post={post}/>   
+                 <Post key={post.post_id} post={post}/>   
                 ))}
             </div>
         )}
