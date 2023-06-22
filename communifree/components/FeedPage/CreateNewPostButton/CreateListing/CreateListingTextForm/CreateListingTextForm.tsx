@@ -28,7 +28,7 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     const [image, setImage] = useState("");
     const [condition, setCondition] = useState("");
     const [contact, setContact] = useState("");
-    const [formError, setFormError] = useState(null)
+    const [formError, setFormError] = useState<string | null>(null)
   
     function handleTitleChange(e: {target: {value:string;}}) {
         setTitle(e.target.value);
