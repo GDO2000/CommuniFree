@@ -8,8 +8,10 @@ import supabase from "../../utils/supabaseClient";
 
 
 
-export default function Navbar(){
-    let { session, router } = useSession();
+
+export default function Navbar({setSearch, handleClick,setPosts, }){
+    const { session, router } = useSession();
+
     
     function handleIconClick(){
         if (!session){
@@ -34,7 +36,7 @@ export default function Navbar(){
             <Image src='/Logo.png' alt = "Communifree logo" id="logo" width="150" height="80"/>
             </li>
             <li>
-              <SearchBar/>
+              <SearchBar handleClick={handleClick}  setPosts={setPosts} setSearch={setSearch}/>
             </li>
             <li>
             <Image  onClick={handleIconClick} src="/SigninLogo.bmp" alt = "User profile logo" id="profile-pic" width="70" height="70"/>

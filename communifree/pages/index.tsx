@@ -17,9 +17,50 @@ import { useState, useEffect } from 'react'
 
   const supabase = createClient('https://ukdeopjzktiqoppsbbvq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrZGVvcGp6a3RpcW9wcHNiYnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYwNDE5MzAsImV4cCI6MjAwMTYxNzkzMH0.UiwFY43g8klf3t182m4kUoDlsVkci-US1gEq-INk8vk')
    
-
+  interface Post {
+    [key: string]: string | number; // Adjust the types based on your actual data structure
+  }
 
 export default function Home(){
+  const [posts, setPosts] = useState<Post[]>([]);
+    const [search, setSearch] = useState<string>("");
+    const [fetchError, setFetchError] = useState<string | null>("");
+
+    const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
+    
+    useEffect(() => {
+      const fetchPosts = async () => {
+        try {
+          const { data, error } = await supabase.from("post_info").select();
+  
+          if (error) {
+            throw new Error("Could not fetch any posts");
+          }
+  
+          setPosts(data || []);
+          setFilteredPosts(data || []);
+        } catch (error) {
+          console.log(error);
+          setFetchError("Could not fetch any posts");
+        }
+      };
+  
+      fetchPosts();
+    }, []);
+  function handleClick(): Array<Post>{
+    const returnArray: Post[] = posts.filter((post) => {
+      const postValues = Object.values(post).map((value) => {
+        if (value !== null && value !== undefined) {
+          return value.toString().toLowerCase();
+        }
+        return '';
+      });
+      const searchTerm = search.toLowerCase();
+      return postValues.some((value) => value.includes(searchTerm));
+    });
+    setFilteredPosts(returnArray)
+    return returnArray
+}
   return(
     <>
      <head>
@@ -36,7 +77,7 @@ export default function Home(){
     {/* Header section */}
     <header>
       {/* Include the Navbar component */}
-      <Navbar/>
+      <Navbar handleClick={handleClick}  setPosts={setPosts} setSearch={setSearch}/>
     </header>
 
     {/* Main section */}
@@ -50,7 +91,7 @@ export default function Home(){
         {/* Include the CreatePostButton component */}
         <CreatePostButton/>
         {/* Include the FeedPage component */}
-        <Feed/>
+        <Feed handleClick={handleClick}  posts={filteredPosts} setSearch={setSearch}/>
       </div>
     </main>
   </>
