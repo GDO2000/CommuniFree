@@ -3,6 +3,7 @@ import './CreateListingTextForm.css'
 import Head from "next/head";
 import supabase from "../../../../../utils/supabaseClient";
 import {v4 as uuidv4} from 'uuid';
+import { useRouter } from "next/router";
 
 
 
@@ -29,6 +30,7 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     const [condition, setCondition] = useState("");
     const [contact, setContact] = useState("");
     const [formError, setFormError] = useState<string | null>(null)
+    const router = useRouter()
   
     function handleTitleChange(e: {target: {value:string;}}) {
         setTitle(e.target.value);
@@ -57,28 +59,21 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     }
       
 
-    const handlePostClick = async(e)=>{
+    const handlePostClick = async()=>{
         let post_id = uuidv4();
-        e.preventDefault()
-        if(!title || !location || !description || !image || !condition || !contact){
+        //e.preventDefault()
+        if (!title.trim() || !location.trim() || !description.trim() || !image.trim() || !condition.trim() || !contact.trim()) {
             setFormError("Please fill in all the fields")
+            console.log(formError)
             return
         }
 
 
-        
-        let postData ={
-            title,
-            location,
-            description,
-            image,
-            condition,
-            contact,
-        }
-
     const { data, error } = await supabase
     .from('post_info')
     .insert([{post_id, title, location, description, image, condition, contact}]);
+
+    
 
     
     
@@ -91,11 +86,14 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         console.log('Data inserted successfully:', data);
         setFormError(null)
         // Handle the successful insertion, e.g., show a success message
+        console.log("hello")
+       
       }
 
 
 
-        setOpenModal(false);
+    
+        router.reload();
     }
     
 
