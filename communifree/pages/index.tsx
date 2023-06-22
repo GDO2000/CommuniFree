@@ -18,13 +18,16 @@ import { useState, useEffect } from 'react'
 
   const supabase = createClient('https://ukdeopjzktiqoppsbbvq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrZGVvcGp6a3RpcW9wcHNiYnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYwNDE5MzAsImV4cCI6MjAwMTYxNzkzMH0.UiwFY43g8klf3t182m4kUoDlsVkci-US1gEq-INk8vk')
    
-  interface Post {
-    [key: string]: string | number; // Adjust the types based on your actual data structure
-  }
+  interface Props {
+  handleClick: () => Post[];
+  posts: Post[];
+  setSearch: Dispatch<SetStateAction<string>>;
+  setPosts: Dispatch<SetStateAction<Post[]>>;
+}
 
 export default function Home(){
-  const [posts, setPosts] = useState<Post[]>([]);
-    const [search, setSearch] = useState<string>("");
+   const [posts, setPosts] = useState<Post[]>([]);
+  const [search, setSearch] = useState<string>("");
     const [fetchError, setFetchError] = useState<string | null>("");
 
     const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
