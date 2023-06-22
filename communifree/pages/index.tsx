@@ -20,12 +20,11 @@ import { useState, useEffect } from 'react'
   interface Post {
     [key: string]: string | number; // Adjust the types based on your actual data structure
   }
-  interface Props {
+interface Props {
   handleClick: () => Post[];
   posts: Post[];
-  setPosts: Post[];
-  setSearch: Dispatch<SetStateAction<string>>;
   setPosts: Dispatch<SetStateAction<Post[]>>;
+  setSearch: Dispatch<SetStateAction<string>>;
 }
 
 export default function Home(){
