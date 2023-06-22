@@ -23,6 +23,7 @@ import { useState, useEffect } from 'react'
   interface Props {
   handleClick: () => Post[];
   posts: Post[];
+  setPosts: Post[];
   setSearch: Dispatch<SetStateAction<string>>;
   setPosts: Dispatch<SetStateAction<Post[]>>;
 }
