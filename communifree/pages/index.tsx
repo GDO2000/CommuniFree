@@ -97,7 +97,7 @@ export default function Home(){
         {/* Include the CreatePostButton component */}
         <CreatePostButton/>
         {/* Include the FeedPage component */}
-        <Feed handleClick={handleClick}  posts={filteredPosts} setSearch={setSearch}/>
+        <Feed handleClick={handleClick}  setPosts={setPosts} posts={filteredPosts} setSearch={setSearch}/>
       </div>
     </main>
   </>
