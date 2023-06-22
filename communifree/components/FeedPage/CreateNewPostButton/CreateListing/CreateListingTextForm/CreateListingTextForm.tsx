@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react"
 import './CreateListingTextForm.css'
 import Head from "next/head";
+import supabase from "../../../../../utils/supabaseClient";
 
 interface ModalProps {
     setOpenModal: (open: boolean) => void;
@@ -20,17 +20,29 @@ type postObject = {
 
 export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
     const [title, setTitle] = useState("");
+    const [location, setLocation] = useState("");
     const [description, setDescription] = useState("");
+    const [image, setImage] = useState("");
     const [condition, setCondition] = useState("");
     const [contact, setContact] = useState("");
+    const [formError, setFormError] = useState(null)
   
     function handleTitleChange(e: {target: {value:string;}}) {
         setTitle(e.target.value);
         console.log(`The title is ${title}`)
     }
+    function handleLocationChange(e: {target: {value:string;}}) {
+        setLocation(e.target.value);
+        console.log(`The location is ${location}`)
+    }
     function handleDescriptionChange(e: {target: {value:string;}}) {
         setDescription(e.target.value);
         console.log(`The description is ${description}`)
+    }
+    
+    function handleImageChange(e: {target: {value:string;}}) {
+        setImage(e.target.value);
+        console.log(`The image url is ${image}`)
     }
     function handleConditionChange(e: {target: {value:string;}}) {
         setCondition(e.target.value);
@@ -43,14 +55,33 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
       
 
     async function handlePostClick(){
-        let obj : postObject ={
+        let postData ={
             title,
+            location,
             description,
+            image,
             condition,
             contact,
         }
-        let newData = [...dummyData,obj]
-        setdummyData(newData)
+
+    const { data, error } = await supabase
+    .from('post_info')
+    .insert([postData]);
+
+// title: postData.title, location: postData.location, description: postData.description, image: postData.image, condition: postData.condition, contact: postData.contact
+    
+    if (error) {
+        console.error(error);
+        // Handle the error, e.g., show an error message
+        console.log('Error:', error);
+    } else {
+        console.log('Data inserted successfully:', data);
+        console.log('Data:', data);
+        // Handle the successful insertion, e.g., show a success message
+      }
+
+
+
         setOpenModal(false);
     }
     
@@ -71,18 +102,27 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         <form>
             <label>Give your listing a title :</label>
             <input className="createpostinput" placeholder="e.g. 10 Carrots" type = "text" onChange={handleTitleChange}/><br></br>
+            
+            <label>What is your post code?</label>
+            <input className="createpostinput" placeholder="NR17 2EX" type = "text" onChange={handleLocationChange}/><br></br>
+            
             <label>Describe your product:</label>
             <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
+            
+            <label>Please provide an image url for your product:</label>
+            <input className="createpostinput" placeholder="http://your_url_here" type='text' onChange={handleImageChange} /><br></br>
+            
             <label htmlFor= "condition">What is the condition of your product:</label> <br></br>
             <select onChange={handleConditionChange} name = "condition" id = "condition">
-         <option value="Fresh / long shelf life">Fresh / long shelf life</option>
-         <option value="Needs to be eaten within a week">Needs to be eaten within a week</option>
-         <option value="Needs to be eaten in the next few days">Needs to be eaten in the next few days</option>
-         <option value="Needs to be eaten today!">Needs to be eaten today!</option>
+                <option value="Fresh / long shelf life">Fresh / long shelf life</option>
+                <option value="Needs to be eaten within a week">Needs to be eaten within a week</option>
+                <option value="Needs to be eaten in the next few days">Needs to be eaten in the next few days</option>
+                <option value="Needs to be eaten today!">Needs to be eaten today!</option>
              </select>
 <br></br>
             <label>Please enter a contact number or email address:</label>
             <input className="createpostinput" placeholder="Examplemail@example.co.uk" type = "text" onChange={handleContactChange} /><br></br>
+            
             <button id= 'cancelbutton' onClick={handleDeleteClick} /*setOpenModal={setOpenModal}*/>Cancel</button>
             <button id= 'postbutton' /*setOpenModal={setOpenModal}*/ onClick={handlePostClick}>Post!</button>
         </form> 
@@ -90,4 +130,4 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         </div>
     );
 
-};
+}
