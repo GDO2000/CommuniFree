@@ -5,7 +5,7 @@ import React from "react";
 import supabase from '../../../utils/supabaseClient'
 
 
-export default function Feed ({setSearch, handleClick,posts,setPosts}) {
+export default function Feed ({setSearch, handleClick,posts}) {
 
 
 const [fetchError, setFetchError] = useState<string | null>(null);
