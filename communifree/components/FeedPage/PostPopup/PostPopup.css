@@ -1,0 +1,11 @@
+
+.postPopup {
+    background-color: var(--light-colour);
+    border-radius: 5px;
+    
+}
+
+.productSection{
+    display:flex;
+    flex-direction: row;
+}
