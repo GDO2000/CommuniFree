@@ -55,7 +55,9 @@ export default function Home(){
     }, []);
   function handleClick(): Array<Post>{
     const returnArray: Post[] = posts.filter((post) => {
-      const postValues = Object.values(post).map((value) => {
+      const keysToSearch = ['location', 'description', 'title']; // Specify the keys to search
+      const postValues = keysToSearch.map((key) => {
+        const value = post[key];
         if (value !== null && value !== undefined) {
           return value.toString().toLowerCase();
         }
