@@ -31,7 +31,6 @@ export default function Post ({post}) {
                         &times;
                     </span>
                     <PostPopup
-                        setModalOpen={setModalOpen}
                         handleDeleteClick={handleDeleteClick}
                         post={post}
                     />
