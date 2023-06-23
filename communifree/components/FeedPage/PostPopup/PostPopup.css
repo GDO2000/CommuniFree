@@ -2,10 +2,22 @@
 .postPopup {
     background-color: var(--light-colour);
     border-radius: 5px;
+    display:flex;
+    flex-direction: column; 
+    
     
 }
 
 .productSection{
     display:flex;
     flex-direction: row;
+}
+
+.closeButton{
+    align-self: end;
+}
+
+.image{
+    height: 200px;
+    width: 200px;
 }
