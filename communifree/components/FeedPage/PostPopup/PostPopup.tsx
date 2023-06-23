@@ -2,7 +2,7 @@ import Comment from './Comment'
 import './PostPopup.css'
 
 
-export default function PostPopup({handleDeleteClick,post}) {
+export default function PostPopup({handleDeleteClick,post, setModalOpen}) {
     
     return(
         <div className='postPopup'>
