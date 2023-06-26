@@ -107,7 +107,7 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
         <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet"></link>
         </Head>
 
-        <div className="modalBackground">
+        <div id="modalBackground">
             <h1 id="createListingH1">Create a listing:</h1>
             <br></br>
         <div>

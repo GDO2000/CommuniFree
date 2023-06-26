@@ -33,7 +33,7 @@ export default function Navbar({setSearch, handleClick,setPosts, }){
     <nav className= 'navbar'>
         <ul>
             <li>
-            <Image src='/Logo.png' alt = "Communifree logo" id="logo" width="150" height="80"/>
+            <Image src='/Logo.png' alt = "Communifree logo" id="logo" width="150" height="85"/>
             </li>
             <li>
               <SearchBar handleClick={handleClick}  setPosts={setPosts} setSearch={setSearch}/>

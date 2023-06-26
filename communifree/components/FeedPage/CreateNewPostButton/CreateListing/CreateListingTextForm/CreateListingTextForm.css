@@ -1,8 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-.modalBackground {
-  margin-top: 1%;
+#modalBackground {
+  margin-top: 60px;
   font-family: 'Montserrat', sans-serif;
     width: 50vw;
     height: 75vh;
@@ -48,7 +48,7 @@
     width: 20%;
     border-radius: 10px;
     background-color: #ff8e49;
-    color: #00000;
+    color: #000;
     font-weight: bold;
     }
 
@@ -93,4 +93,103 @@
 
   #createListingH1{
     margin-top: 10px;
+  }
+
+
+  @media(max-width: 1000px) {
+    #modalBackground {
+      margin-top: auto;
+      max-height: 80%;
+      font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        max-width: ;
+        height: 75vh;
+        background-color: #0b5351;
+        color: #f8f1ff;
+        position: fixed;
+        display: flex-column;
+        font-size: 1.2em;
+        text-align: center;
+        border: none;
+        border-radius: 50px;
+        padding-top: 10px;
+        padding-left: 10%;
+        padding-right: 10%;
+        box-sizing: border-box; 
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        }
+    
+    .createpostinput, #condition{
+      height: 35px;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      border: none;
+      border-radius: 13px;
+      padding-right: 15px;
+      padding-left: 30px;
+      margin-top: 10px;
+      box-sizing: border-box;
+      
+        }
+    
+    
+    #postbutton{
+      float: right;
+      cursor: pointer;
+      border: none;
+      outline: none;
+        height: 8%;
+        width: 20%;
+        border-radius: 10px;
+        background-color: #ff8e49;
+        color: #000;
+        font-weight: bold;
+        }
+    
+        #cancelbutton{
+          float: left;
+          cursor: pointer;
+          outline: none;
+          height: 8%;
+          width: 20%;
+          border-radius: 10px;
+          background-color: #0b5351;
+          color: #ffffff;
+          border: 3px solid #ffffff;
+          font-weight: bold;
+          }
+    
+    
+    
+    
+    
+      textarea{
+        margin-top: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 20px;
+        height:30%;
+        padding-left: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+      }
+    
+      textarea:focus::placeholder {
+        color: transparent;
+      }
+    
+      form{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    
+      }
+    
+      #createListingH1{
+        margin-top: 10px;
+      }
   }

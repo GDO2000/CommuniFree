@@ -55,8 +55,8 @@ nav li:not(:last-child) {
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-  width : 60;
-  height: 60;
+  width : 60px;
+  height: 60px;
 
 }
 #profile-pic:hover{
@@ -65,8 +65,8 @@ nav li:not(:last-child) {
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-  width : 60;
-  height: 60;
+  width : 60px;
+  height: 60px;
 
 }
 
@@ -133,6 +133,9 @@ li {
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
+    min-width:40px;
+    max-width: 150px;
+    height: auto;
     transition: width 0.5s;
   }
   
@@ -142,10 +145,10 @@ li {
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
-    transition: width 0.5s;
-    max-width : 60;
+    transition: width 1s;
+    max-width : 60px;
     /* min-width: 30; */
-    height: 30;
+    height: auto;
   
   }
   #profile-pic:hover{
