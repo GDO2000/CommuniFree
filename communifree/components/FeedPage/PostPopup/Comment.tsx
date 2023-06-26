@@ -1,11 +1,11 @@
-
+import './Comment.css'
 
 
 export default function Comment(){
     return(
-    <div>
-       <h3>Name of commenter</h3> 
-       <p>The comment will go here</p>
+    <div className='comment'>
+       <h3 className='commentHeading' >Name of commenter</h3> 
+       <p className='commentBody'>The comment will go here</p>
     </div>
     )
 }

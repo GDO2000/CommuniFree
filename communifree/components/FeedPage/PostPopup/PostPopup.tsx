@@ -2,6 +2,7 @@ import Comment from './Comment'
 import './PostPopup.css'
 
 
+
 export default function PostPopup({handleDeleteClick,post}) {
     
     return(
@@ -15,8 +16,8 @@ export default function PostPopup({handleDeleteClick,post}) {
            
             <div className='productInfo'>
             
-            <h1>{post.title}</h1>
-            <h3>{post.location}</h3>
+            <h1 className='postTitle'>{post.title}</h1>
+            <h3 className='postLocation'>{post.location}</h3>
             <p>{post.description}</p>
         </div>
             <div className='closeButton'>
@@ -25,9 +26,13 @@ export default function PostPopup({handleDeleteClick,post}) {
        
         </div>
         <div className='commentSection'>
-            <h1>Comments:</h1>
-            <input placeholder="What are your thoughts?" type='text'></input>
-            <button>Send</button>
+            <h1 className='commentSectionHeading'>Comments:</h1>
+            <div className="searchbar">
+            <input className='commentInput' placeholder="What are your thoughts?" type='text'></input>
+            <button className='sendButton' ><img src='/SendIcon.png' width='25' height='20' alt=''/></button>
+            </div>
+            <Comment/>
+            <Comment/>
             <Comment/>
         </div>
         </div>

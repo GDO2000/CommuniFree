@@ -40,6 +40,54 @@
     justify-self:flex-start;
 }
 
+.postTitle {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--darkgreen-colour)
+}
+
+.postLocation{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
 .commentSection{
     padding-top: 15px;
+}
+
+.commentInput{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 7px;
+    width: 85%;
+    border-style:none;
+    outline: none;
+    background-color: var(--light-colour);
+}
+
+.sendButton{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 10%;
+    border-style: none;
+    background-color: var(--light-colour)
+}
+
+.searchbar {
+    background: var(--light-colour);
+    border-style: solid;
+    border-color: rgb(147, 147, 147);
+    display:flex;
+    align-items:center;
+    background-color: var(--light-colour);
+}
+
+.modal-overlay{
+    padding-top: 70px;
+}
+
+.commentSectionHeading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: var(--darkgreen-colour);
 }
