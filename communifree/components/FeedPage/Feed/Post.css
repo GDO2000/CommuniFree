@@ -16,7 +16,7 @@
     align-self:center;
     /* border-style: solid; */
     border-radius: 10px;
-    height: 100px;;
+    height: 100px;
 }
 
 .postTitle{
@@ -33,4 +33,9 @@
 .postDescription{
     font-size: 15px;
     font-weight:300
+}
+
+@media (max-width: 600px) {
+
+   
 }
