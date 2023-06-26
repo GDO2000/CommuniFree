@@ -12,6 +12,8 @@
 
 #Auth {
 width: 25vw;
+padding-top: 100px;
+margin-left: 2.5%;
 }
 
 #signIn {
@@ -27,6 +29,8 @@ position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
+    font-family: 'Quicksand', sans-serif;
+    
 }
 
 
