@@ -121,14 +121,14 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
             <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
             
             <label>Please provide an image url for your product:</label>
-            <input className="createpostinput" placeholder="http://your_url_here" type='text' onChange={handleImageChange} /><br></br>
+            <input className="createpostinput" placeholder="http://your_url_here" type='file' onChange={handleImageChange} /><br></br>
             
             <label htmlFor= "condition">What is the condition of your product:</label> <br></br>
-            <select onChange={handleConditionChange} name = "condition" id = "condition">
-                <option value="Fresh / long shelf life">Fresh / long shelf life</option>
-                <option value="Needs to be eaten within a week">Needs to be eaten within a week</option>
-                <option value="Needs to be eaten in the next few days">Needs to be eaten in the next few days</option>
-                <option value="Needs to be eaten today!">Needs to be eaten today!</option>
+            <select  onChange={handleConditionChange} name = "condition" id = "condition">
+                <option id = "condition" value="Fresh / long shelf life">Fresh / long shelf life</option>
+                <option id = "condition" value="Needs to be eaten within a week">Needs to be eaten within a week</option>
+                <option id = "condition" value="Needs to be eaten in the next few days">Needs to be eaten in the next few days</option>
+                <option id = "condition" value="Needs to be eaten today!">Needs to be eaten today!</option>
              </select>
 <br></br>
             <label>Please enter a contact number or email address:</label>

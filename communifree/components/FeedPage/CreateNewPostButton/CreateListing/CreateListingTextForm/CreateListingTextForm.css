@@ -24,7 +24,7 @@
     font-weight: bold;
     }
 
-.createpostinput{
+.createpostinput, #condition{
   height: 35px;
   width: 100%;
   background-color: white;
@@ -34,8 +34,10 @@
   padding-right: 15px;
   padding-left: 30px;
   margin-top: 10px;
+  box-sizing: border-box;
   
     }
+
 
 #postbutton{
   float: right;
@@ -63,11 +65,8 @@
       font-weight: bold;
       }
 
-    #popup{
-      /* background-color: white;
-      height: 100vh;
-      width:100vw; */
-    }
+
+
 
 
   textarea{
@@ -78,6 +77,7 @@
     height:30%;
     padding-left: 30px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
   }
 
   textarea:focus::placeholder {
