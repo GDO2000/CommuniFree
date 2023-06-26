@@ -10,34 +10,57 @@ export default function PostPopup({handleDeleteClick,post}) {
     const [comments,setComments] = useState<Comment[]>([]);
     const [filteredComments, setFilteredComments] = useState<Comment[]>([]);
 
-    useEffect(() => {
-        const fetchComments = async () => {
-          try {
+    // useEffect(() => {
+    //     const fetchComments = async () => {
+    //       try {
             
-            let { data, error } = await supabase
-            .from('Comments')
-            .select()
+    //         let { data, error } = await supabase
+    //         .from('Comments')
+    //         .select();
 
-            if (error) {
-              throw new Error("Could not fetch any comments");
-            }
-            console.log(data)
-            await setComments(data || []);
-          } catch (error) {
-            console.log(error);
-            setFetchError("Could not fetch any comments");
-          }
+    //         if (error) {
+    //           throw new Error("Could not fetch any comments");
+    //         }
+    //         console.log(data);
+    //         console.log('heres the log');
+    //         await setComments(data || []);
+    //       } catch (error) {
+    //         console.log(error);
+    //         setFetchError("Could not fetch any comments");
+    //       }
+    //       console.log(comments);
+    //     };
+
+    //     fetchComments();
+
+    // },[]);
+
+    useEffect(() => {
+      const fetchComments = async() => {
+      const {data, error} = await supabase
+      .from('Comments')
+      .select()
+  
+      if (error){
+          setFetchError('Could not fetch any posts');
+          setComments([]);
+          console.log(error);
+      }
+  
+      if (data){
+          console.log(data);
+          setComments(data);
           console.log(comments);
-        };
-
-        fetchComments();
-
-    },[]);
-    
-    
-
-
-    
+  
+          setFetchError(null);
+      }
+  }
+  console.log('are we here?');
+  fetchComments();
+  console.log('after calling comments');
+  console.log(comments);
+  }, [] );
+        
     return(
         <div className='postPopup'>
             
@@ -68,5 +91,5 @@ export default function PostPopup({handleDeleteClick,post}) {
             
         </div>
         </div>
-    )
+    );
 }
