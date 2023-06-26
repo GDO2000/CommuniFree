@@ -59,11 +59,9 @@ export default function SearchBar({setSearch, handleClick,setPosts}) {
           onChange={handleChange}
         />
         <button className="search-button" onClick={handleClick}>
-          <img
-            src="/searchimg.bmp"
+          <img className='search-button'
+            src="/MagGlass.png"
             alt="magnifying glass image"
-            width="50"
-            height="40"
           />
         </button>
       </div>

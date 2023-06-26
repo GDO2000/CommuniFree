@@ -81,7 +81,7 @@ export default function Home(){
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
 
   {/* Start of main content */}
-  <>
+  <div className="wholePage">
     {/* Header section */}
     <header>
       {/* Include the Navbar component */}
@@ -97,12 +97,12 @@ export default function Home(){
 
       <div className='buttonAndFeed'>
         {/* Include the CreatePostButton component */}
-        <CreatePostButton/>
+        {/* <CreatePostButton/> */}
         {/* Include the FeedPage component */}
         <Feed handleClick={handleClick}  setPosts={setPosts} posts={filteredPosts} setSearch={setSearch}/>
       </div>
     </main>
-  </>
+  </div>
   </>
   )
   }

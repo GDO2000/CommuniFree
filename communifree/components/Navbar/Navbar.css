@@ -19,7 +19,7 @@
 
 :root {
   --lightgreen-colour: #82ad8b;
-  --light-colour: #F8F1FF;
+  --light-colour: #EEEBE4;
   --dark-colour: #061301;
   --accent-colour: #FF9B42;
   --darkgreen-colour: #0B5351;
@@ -37,7 +37,7 @@ body {
   width: 100%;
   justify-content: space-between;
   list-style: none;
-  background-color: var(--lightgreen-colour);
+  background-color: #EEEBE4;
 }
 
 nav li:not(:last-child) {
@@ -46,8 +46,7 @@ nav li:not(:last-child) {
 
 #logo {
   position:relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 #profile-pic {
@@ -111,4 +110,20 @@ li {
   -webkit-user-select: none;
   touch-action: manipulation;*/
 
+}
+
+.leftNav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 45vw;
+  justify-content: space-between;
+}
+
+.rightNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 17vw;
+    justify-content: space-between;
 }
