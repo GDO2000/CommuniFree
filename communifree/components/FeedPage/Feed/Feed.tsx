@@ -32,9 +32,9 @@ useEffect(() => {
     }
 }
 
-fetchPosts()
+fetchPosts();
 
-}, [] )
+}, [] );
 
      return (
     <>

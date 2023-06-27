@@ -1,0 +1,95 @@
+
+.postPopup {
+    background-color: var(--light-colour);
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column; 
+    padding: 10px;
+    
+    
+}
+
+.productSection{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.closeButton{
+    align-self: flex-start;
+    justify-self: flex-end;
+    width: 50px;
+    
+}
+.closeButton button {
+    background: none; /* Remove the background color */
+    border: none; /* Remove the border */
+    color: #919191; /* Set the color of the "X" */
+    font-size: 24px; /* Adjust the font size as desired */
+    cursor: pointer;
+    padding-left: 70%;
+}
+
+
+
+.image{
+    height: 150px;
+    width: 200px;
+}
+.productInfo{
+    justify-self:flex-start;
+}
+
+.postTitle {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--darkgreen-colour)
+}
+
+.postLocation{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
+.commentSection{
+    padding-top: 15px;
+}
+
+.commentInput{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 7px;
+    width: 85%;
+    border-style:none;
+    outline: none;
+    background-color: var(--light-colour);
+}
+
+.sendButton{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 10%;
+    border-style: none;
+    background-color: var(--light-colour);
+    cursor: pointer;
+    
+}
+
+.searchbar {
+    background: var(--light-colour);
+    border-style: solid;
+    border-color: rgb(147, 147, 147);
+    display:flex;
+    align-items:center;
+    background-color: var(--light-colour);
+}
+
+.modal-overlay{
+    padding-top: 70px;
+}
+
+.commentSectionHeading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: var(--darkgreen-colour);
+}
