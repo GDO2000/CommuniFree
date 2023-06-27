@@ -25,6 +25,7 @@ export default function Navbar({setSearch, handleClick,setPosts, }){
 
     async function signOut(){
         await supabase.auth.signOut()
+        await router.push("/")
 
 
 
