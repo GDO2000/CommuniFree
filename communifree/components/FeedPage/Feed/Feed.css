@@ -7,4 +7,18 @@
     margin-top: 30px;
     width:auto;
     background-color: #EEEBE4;
+    border-radius:15px;
 }
+
+@media (max-width: 1050px) {
+
+    .postGrid {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
+        margin-top: 30px;
+        width:100%;
+        background-color: #EEEBE4;
+        border-radius:15px;
+} }

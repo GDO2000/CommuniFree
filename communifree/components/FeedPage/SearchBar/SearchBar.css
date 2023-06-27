@@ -40,3 +40,50 @@
 input:focus::placeholder {
   color: transparent;
 }
+
+@media (max-width: 820px) {
+  .search-bar {
+    width: 100%;
+    max-width: 800px;
+    min-width: 200px;
+    /* height:30px; */
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    justify-self: center;
+    font-size: 3vw;
+    align-self: center;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+    min-width: 200px;
+  }
+  
+  .search-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: white;
+    background: none;
+    /* justify-self:right;
+    align-self:center; */
+  }
+  
+  #searchfield{
+    /* height: 60px; */
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    background-color: white;
+    display: flex;
+    border: none;
+    border-radius: 30px;
+    justify-content: space-between;
+    align-content: center;
+    padding-right: 15px;
+    padding-left: 30px;
+    transition: width 0.5s;
+  }
+  
+}
