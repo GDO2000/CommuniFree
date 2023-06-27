@@ -10,12 +10,6 @@ import  './index.css'
 import Image from "next/image"
 import Head from 'next/head';
 
-import { useRouter } from 'next/router'
-import { useSession} from '../backend/db/session'
-import  './index.css'
-import Head from 'next/head';
-
-
 
 const supabase = createClient('https://ukdeopjzktiqoppsbbvq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrZGVvcGp6a3RpcW9wcHNiYnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYwNDE5MzAsImV4cCI6MjAwMTYxNzkzMH0.UiwFY43g8klf3t182m4kUoDlsVkci-US1gEq-INk8vk')
 
@@ -72,33 +66,3 @@ export default function SignIn() {
     router.push('/feedpage');
   }
   }
-
-
-
-
-
-
-
-
-=======
-  
-
-  if (!session) {
-    return (
-      <>
-      <Head>
-     {/* Preconnect to Google Fonts API */}
-     {/* Load the Montserrat font styles */}
-     <title>CommuniFree</title>
-     <link rel="shortcut icon" href="/favicon.png" />
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
-   </Head>
-  <div id="Auth">
-  <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
-  </div>
-  </>
-  )} else {
-    router.push('/feedpage');
-  }
-}
-

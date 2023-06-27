@@ -6,7 +6,6 @@ import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
 import { Dispatch, SetStateAction } from 'react';
 
 import { useSession} from '../backend/db/session'
-=======
 
 
 import Feed from "../components/FeedPage/Feed/Feed";
@@ -32,15 +31,6 @@ interface Props {
   setSearch: Dispatch<SetStateAction<string>>;
 }
 
-
-
-
-export default function Home(){
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [search, setSearch] = useState<string>("");
-  const [fetchError, setFetchError] = useState<string | null>("");
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
-  const { session, router } = useSession()
 
 export default function Home(){
    const [posts, setPosts] = useState<Post[]>([]);
@@ -94,9 +84,6 @@ export default function Home(){
 
 
    return(
-
-  return(
-
     <>
      <Head>
     {/* Preconnect to Google Fonts API */}
@@ -131,22 +118,14 @@ export default function Home(){
       <div className='buttonAndFeed'>
         {/* Include the CreatePostButton component */}
 
-        <CreatePostButton/>
-
         {/* <CreatePostButton/> */}
 
         {/* Include the FeedPage component */}
         <Feed handleClick={handleClick}  setPosts={setPosts} posts={filteredPosts} setSearch={setSearch}/>
       </div>
     </main>
-
-  </>
-  </>
-  )
-   }
-
-
-  </div>
+</div>
+</>
   </>
   )
   }
