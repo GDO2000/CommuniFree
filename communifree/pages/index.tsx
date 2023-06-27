@@ -13,6 +13,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router'
 import { useSession} from '../backend/db/session'
 import  './index.css'
+import Head from 'next/head';
 
 
 
@@ -70,9 +71,18 @@ export default function SignIn() {
 
   if (!session) {
     return (
+      <>
+      <Head>
+     {/* Preconnect to Google Fonts API */}
+     {/* Load the Montserrat font styles */}
+     <title>CommuniFree</title>
+     <link rel="shortcut icon" href="/favicon.png" />
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+   </Head>
   <div id="Auth">
   <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
   </div>
+  </>
   )} else {
     router.push('/feedpage');
   }

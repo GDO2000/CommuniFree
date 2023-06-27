@@ -1,5 +1,15 @@
+import Head from "next/head"
 export default function guidance() {
     return (
+        <>
+        <Head>
+       {/* Preconnect to Google Fonts API */}
+       {/* Load the Montserrat font styles */}
+       <title>CommuniFree</title>
+       <link rel="shortcut icon" href="/favicon.png" />
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+     </Head>
+        
         <div>
             <h1>Guidelines</h1>
             <p>For the safety and wellbeing of other users, please follow these guidelines when using this app. Thank you!</p>
@@ -17,5 +27,6 @@ export default function guidance() {
                 <li></li>
             </ul>
         </div>
+        </>
     );
 }
