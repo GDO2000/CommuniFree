@@ -32,6 +32,10 @@
     font-weight:300
 }
 
+
+.modal-content{
+    padding:0%;
+
 .img-container{
     width: 250px;
     height: 200px;
@@ -50,5 +54,4 @@
 
 @media (max-width: 600px) {
 
-   
 }

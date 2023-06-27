@@ -12,12 +12,13 @@ import Feed from "../components/FeedPage/Feed/Feed";
 import '../components/Navbar/Navbar.css';
 import Navbar from "../components/Navbar/Navbar";
 import Filters from '../components/FeedPage/Filters/Filters'
-
+import  Head  from "next/head";
 
 import { useState, useEffect } from 'react'
   import { createClient } from '@supabase/supabase-js'
   import { Auth } from '@supabase/auth-ui-react'
   import { ThemeSupa } from '@supabase/auth-ui-shared'
+import Link from "next/link";
 
   const supabase = createClient('https://ukdeopjzktiqoppsbbvq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrZGVvcGp6a3RpcW9wcHNiYnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYwNDE5MzAsImV4cCI6MjAwMTYxNzkzMH0.UiwFY43g8klf3t182m4kUoDlsVkci-US1gEq-INk8vk')
   interface Post {
@@ -84,11 +85,13 @@ export default function Home(){
 
    return(
     <>
-     <head>
+     <Head>
     {/* Preconnect to Google Fonts API */}
     {/* Load the Montserrat font styles */}
+    <title>CommuniFree</title>
+    <link rel="shortcut icon" href="/favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
-  </head>
+  </Head>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
