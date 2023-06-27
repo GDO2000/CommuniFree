@@ -5,6 +5,7 @@ import "./Navbar.css"
 import {useSession} from '../../backend/db/session'
 import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
 import supabase from "../../utils/supabaseClient";
+import CreatePostButton from "../FeedPage/CreateNewPostButton/CreateNewPostButton";
 
 
 
@@ -24,6 +25,7 @@ export default function Navbar({setSearch, handleClick,setPosts, }){
 
     async function signOut(){
         await supabase.auth.signOut()
+        await router.push("/")
 
 
 
@@ -32,16 +34,23 @@ export default function Navbar({setSearch, handleClick,setPosts, }){
     return(
     <nav className= 'navbar'>
         <ul>
+            <div className="leftNav">
             <li>
-            <Image src='/Logo.png' alt = "Communifree logo" id="logo" width="150" height="80"/>
+            <img src='/logo.png' alt = "Communifree logo" id="logo" width="150" height="80"/>
             </li>
             <li>
               <SearchBar handleClick={handleClick}  setPosts={setPosts} setSearch={setSearch}/>
             </li>
+            </div>
+            <div className='rightNav'>
             <li>
-            <Image  onClick={handleIconClick} src="/SigninLogo.bmp" alt = "User profile logo" id="profile-pic" width="70" height="70"/>
+              <CreatePostButton/>
+            </li>
+            <li>
+            <img  onClick={handleIconClick} src="/ProfilePic.png" alt = "User profile logo" id="profile-pic" width="70" height="70"/>
             {session && <button id="signOutButton" onClick={signOut}>Sign out</button>}
             </li>
+            </div>
         </ul>
     </nav>
     );
