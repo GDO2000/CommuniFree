@@ -71,12 +71,13 @@ export default function Post ({post}) {
     }
 
     return (
-        <div className="post">
+        <div className="post" >
+            <div onClick={handleClick}>
         <img className='postImage' src={post.image} alt='Picture of Item'/>
         <h1 className='postTitle'>{post.title}</h1>
         <h2 className='postLocation'>{post.location}</h2>
         <p className='postDescription'>{post.description}</p>
-        <button onClick={handleClick}>See more!</button>
+        </div>
         {modalOpen && (
             <div className="modal-overlay">
                 <div className="modal-content">
