@@ -80,15 +80,17 @@ export default function Post ({post}) {
         </div>
         {modalOpen && (
             <div className="modal-overlay">
-                <div className="modal-content">
-                    <span
+                <div className="modal-content2">
+                    <div className='closeButton'>
+                        <button  className= "closePopUp" onClick={handleDeleteClick}>X</button>
+                    </div>
+                        <span
                         className="modal-close"
                         onClick={handleDeleteClick}
                     >
                         &times;
                     </span>
                     <PostPopup
-                        handleDeleteClick={handleDeleteClick}
                         post={post}
                         comments={comments}
                     />

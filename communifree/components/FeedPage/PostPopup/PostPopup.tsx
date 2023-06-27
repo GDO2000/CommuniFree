@@ -15,7 +15,7 @@ type CommentObject = {
     comment: string
     }
 
-export default function PostPopup({handleDeleteClick,post,comments}) {
+export default function PostPopup({post,comments}) {
     const [comment, setComment] = useState("");
     const [commentError, setCommentError] = useState<string | null>(null)
     const router=useRouter();
@@ -84,9 +84,7 @@ export default function PostPopup({handleDeleteClick,post,comments}) {
             <h3 className='postLocation'>{post.location}</h3>
             <p>{post.description}</p>
         </div>
-            <div className='closeButton'>
-                <button className= "closePopUp" onClick={handleDeleteClick}>X</button>
-            </div>
+            
        
         </div>
         <div className='commentSection'>
