@@ -70,7 +70,9 @@
     padding-bottom: 15px;
     width: 10%;
     border-style: none;
-    background-color: var(--light-colour)
+    background-color: var(--light-colour);
+    cursor: pointer;
+    
 }
 
 .searchbar {
