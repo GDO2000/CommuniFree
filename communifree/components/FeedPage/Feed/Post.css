@@ -34,8 +34,13 @@
 }
 
 
-.modal-content{
-    padding:0%;
+.modal-content2{
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: var(--light-colour);
+    border-radius: 5px;
 }
 .img-container{
     width: 250px;
@@ -55,4 +60,18 @@
 
 @media (max-width: 600px) {
 
+}
+
+.closeButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+.closeButton button {
+    background: none; /* Remove the background color */
+    border: none; /* Remove the border */
+    color: #919191; /* Set the color of the "X" */
+    font-size: 24px; /* Adjust the font size as desired */
+    cursor: pointer;
+    
 }

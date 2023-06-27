@@ -5,6 +5,7 @@
     display:flex;
     flex-direction: column; 
     padding: 10px;
+    width: 400px;
     
     
 }
@@ -12,23 +13,9 @@
 .productSection{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-.closeButton{
-    align-self: flex-start;
-    justify-self: flex-end;
-    width: 50px;
     
 }
-.closeButton button {
-    background: none; /* Remove the background color */
-    border: none; /* Remove the border */
-    color: #919191; /* Set the color of the "X" */
-    font-size: 24px; /* Adjust the font size as desired */
-    cursor: pointer;
-    padding-left: 70%;
-}
+
 
 
 
@@ -38,6 +25,7 @@
 }
 .productInfo{
     justify-self:flex-start;
+    padding-left: 35px;
 }
 
 .postTitle {
