@@ -151,7 +151,7 @@ li {
     min-width:100px;
     max-width: 150px;
     height: auto;
-    transition: width 0.5s;
+    transition: width 0.1s;
   }
   
   #profile-pic {
@@ -212,5 +212,24 @@ li {
     text-transform: none;
     transform: translateZ(0);
     margin-top: 18%;
-} }
+  }
+
+    .leftNav{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      /* width: 45vw; */
+      flex:1; 
+      justify-content: space-between;
+    }
+    
+    .rightNav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex:1;
+        /* width: 17vw; */
+        justify-content: space-between;
+    }
+} 
 

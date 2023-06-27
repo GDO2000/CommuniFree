@@ -51,7 +51,7 @@ input:focus::placeholder {
     border: none;
     outline: none;
     justify-self: center;
-    font-size: 3vw;
+    font-size: 2vw;
     align-self: center;
   }
 
