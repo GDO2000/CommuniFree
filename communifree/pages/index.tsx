@@ -46,8 +46,25 @@ export default function SignIn() {
                  </div> 
                  
              </div>
-             <div className= "footer-container">
-             <h2> Our Mission..</h2>
+             <div id= "footer-container">
+                <h2 id='title' > Our Mission...</h2><br></br>
+                <div id="columns">
+                      <div id="community">
+                          <Image src= '/community1.png' width="150" height="120" alt="community logo"></Image>
+                          <h3>Community</h3>
+                          <p>As our name suggests, our goal is to build community connections in your local area. We are stronger together! </p>
+                      </div>
+                      <div id="cash">
+                          <Image src= '/cash.png' width="120" height="120" alt="cash logo"></Image>
+                          <h3>Save your cash!</h3>
+                          <p>The produce you'll find on the CommuniFree app is free, and we're commited to keeping it that way!</p>
+                      </div>
+                      <div id="planet">
+                        <Image src= '/planet.png' width="120" height="120" alt="planet logo"></Image>
+                        <h3>Save the planet!</h3>
+                        <p>Join the movement in reducing food waste and shaping a greener world for everyone</p>
+                      </div>
+                </div>
              </div>   
              </>
                             
@@ -55,9 +72,6 @@ export default function SignIn() {
     router.push('/feedpage');
   }
   }
-                
-  
-  
 
 
 
