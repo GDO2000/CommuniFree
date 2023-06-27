@@ -1,0 +1,33 @@
+:root {
+    --lightgreen-colour: #82ad8b;
+    --light-colour: #eeebe4;
+    --dark-colour: #061301;
+    --accent-colour: #FF9B42;
+    --darkgreen-colour: #0B5351;
+  }
+
+
+main {
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    z-index: 1;
+
+}
+
+header{
+    position:relative;
+    z-index: 2;
+}
+
+.buttonAndFeed{
+    width: 85%;
+    margin-top: 6%;
+}
+
+.wholePage {
+    display: flex;
+    flex-direction: column
+}
