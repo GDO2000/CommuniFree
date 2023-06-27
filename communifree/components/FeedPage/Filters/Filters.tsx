@@ -67,9 +67,10 @@ export default function Filters(){
             </div>
 
             <div className="slidecontainer">
-                <h3>Distance</h3>
+                <h3>Distance From You</h3>
                 <br></br>
-            <input type="range" min="1" max="100" value={sliderValue} className="slider" id="myRange" onChange={handleSliderChange}/>
+            <input type="range" min="1" max="10" value={sliderValue} className="slider" id="myRange" onChange={handleSliderChange}/>
+            <p id="sliderValueDisplay">{sliderValue} km</p>
             </div>
 
             

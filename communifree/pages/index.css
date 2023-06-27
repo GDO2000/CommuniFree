@@ -1,28 +1,93 @@
-:root {
-    --lightgreen-colour: #82ad8b;
-    --light-colour: #F8F1FF;
-    --dark-colour: #061301;
-    --accent-colour: #FF9B42;
-    --darkgreen-colour: #0B5351;
+
+/* :root {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
+
+
+#Auth {
+width: 25vw;
+padding-top: 100px;
+margin-left: 2.5%;
+}
+
+
+
+#signIn {
+    background-image: url('/backgroundimage.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: 'Quicksand', sans-serif; 
+    box-sizing: border-box;
+}
+
+h1{
+
+color:#0b5351;
+
+
+}
+
+#footer-container {
+    font-family: 'Quicksand', sans-serif; 
+    background-color: #0b5351;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom: -480px;
+    width: 100vw;
+    /* box-sizing: border-box; */
+    height:45%;
+    display: flex;
+   justify-content:first baseline;
+  flex-direction: column;
+    align-items:center
   }
 
-
-main {
-    margin-left: 2%;
-    margin-right: 2%;
+  #columns{
     display: flex;
-    flex-direction: row;
-    position:relative;
-    z-index: 1;
+    width: 100%;
+    align-items: center;
+    /* align-content: space-evenly; */
+    
+  }
 
+  #columns > div {
+    /* flex: 1; */
+    margin: 0 10px;
+    text-align: center;
+    justify-content:first baseline;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* padding-bottom: 10%; */
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif; 
+  }
+
+h2{
+
+font-size: 40px;
+font-family: 'Quicksand', sans-serif; 
+font-weight:lighter;
 }
 
-header{
-    position:relative;
-    z-index: 2;
-}
-
-.buttonAndFeed{
-    width: 85%;
-    margin-top: 10%;
+#columns h3{
+  
+  font-size: 23px;
+  font-family: 'Quicksand', sans-serif; 
 }

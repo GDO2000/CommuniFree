@@ -94,6 +94,7 @@ export default function Post ({post}) {
                 </div>
             </div>
         )}
+
         </div>
-    )
-};
+    );
+}
