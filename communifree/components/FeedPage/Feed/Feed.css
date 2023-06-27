@@ -6,7 +6,7 @@
     justify-items: center;
     margin-top: 30px;
     width:auto;
-    background-color: var(--lightgreen-colour);
+    background-color: #EEEBE4;
     border-radius:15px;
 }
 
@@ -19,6 +19,6 @@
         justify-items: center;
         margin-top: 30px;
         width:100%;
-        background-color: var(--lightgreen-colour);
+        background-color: #EEEBE4;
         border-radius:15px;
 } }
