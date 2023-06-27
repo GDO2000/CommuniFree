@@ -40,3 +40,8 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
 }
+// jest.config.js
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+};
