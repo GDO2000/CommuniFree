@@ -16,7 +16,7 @@ export default function Navbar({setSearch, handleClick,setPosts, }){
     
     function handleIconClick(){
         if (!session){
-            router.push('/signin')
+            router.push('/')
 
 
         }

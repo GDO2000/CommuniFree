@@ -1,6 +1,10 @@
 :root {
     --lightgreen-colour: #82ad8b;
+
+    --light-colour: #F8F1FF;
+
     --light-colour: #eeebe4;
+
     --dark-colour: #061301;
     --accent-colour: #FF9B42;
     --darkgreen-colour: #0B5351;
@@ -24,10 +28,14 @@ header{
 
 .buttonAndFeed{
     width: 85%;
+
+    margin-top: 10%;
+
     margin-top: 6%;
 }
 
 .wholePage {
     display: flex;
     flex-direction: column
+
 }
