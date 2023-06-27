@@ -128,7 +128,7 @@ li {
     justify-content: space-between;
 }
 
-/* @media (max-width: 820px) {
+ @media (max-width: 820px) {
   .navbar {
     display: flex; 
     position: fixed;
@@ -136,7 +136,8 @@ li {
     width: 100%;
     justify-content: space-between;
     list-style: none;
-    background-color: var(--lightgreen-colour);
+    background-color: var(--light-colour);
+    flex-wrap: wrap;
   }
 
   nav li:not(:last-child) {
@@ -145,10 +146,9 @@ li {
   
   #logo {
     position:relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     width: 100%;
-    min-width:40px;
+    min-width:100px;
     max-width: 150px;
     height: auto;
     transition: width 0.5s;
@@ -162,8 +162,8 @@ li {
     width: 100%;
     transition: width 1s;
     max-width : 60px;
-    /* min-width: 30; */
-/*     height: auto;
+    min-width: 30px;
+    height: 60px;
   
   }
   #profile-pic:hover{
@@ -172,8 +172,8 @@ li {
     padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
-    width : 60;
-    height: 30;
+    width : 60px;
+    height: 30px;
   }
   
   ul {
@@ -212,5 +212,5 @@ li {
     text-transform: none;
     transform: translateZ(0);
     margin-top: 18%;
-} } */
+} }
 
