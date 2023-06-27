@@ -4,7 +4,10 @@ import './feedpage.css'
 import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton";
 import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
 import { Dispatch, SetStateAction } from 'react';
+
 import { useSession} from '../backend/db/session'
+=======
+
 
 import Feed from "../components/FeedPage/Feed/Feed";
 import '../components/Navbar/Navbar.css';
@@ -30,12 +33,21 @@ interface Props {
 
 
 
+
 export default function Home(){
   const [posts, setPosts] = useState<Post[]>([]);
   const [search, setSearch] = useState<string>("");
   const [fetchError, setFetchError] = useState<string | null>("");
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const { session, router } = useSession()
+
+export default function Home(){
+   const [posts, setPosts] = useState<Post[]>([]);
+  const [search, setSearch] = useState<string>("");
+    const [fetchError, setFetchError] = useState<string | null>("");
+
+    const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
+
     
     useEffect(() => {
       const fetchPosts = async () => {
@@ -58,6 +70,9 @@ export default function Home(){
     }, []);
 
 
+
+
+
   function handleClick(): Array<Post>{
     const returnArray: Post[] = posts.filter((post) => {
       const keysToSearch = ['location', 'description', 'title']; // Specify the keys to search
@@ -76,7 +91,11 @@ export default function Home(){
 }
 
 
+
    return(
+
+  return(
+
     <>
      <head>
     {/* Preconnect to Google Fonts API */}
@@ -88,7 +107,11 @@ export default function Home(){
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
 
   {/* Start of main content */}
+
   <>
+
+  <div className="wholePage">
+
     {/* Header section */}
     <header>
       {/* Include the Navbar component */}
@@ -104,13 +127,24 @@ export default function Home(){
 
       <div className='buttonAndFeed'>
         {/* Include the CreatePostButton component */}
+
         <CreatePostButton/>
+
+        {/* <CreatePostButton/> */}
+
         {/* Include the FeedPage component */}
         <Feed handleClick={handleClick}  setPosts={setPosts} posts={filteredPosts} setSearch={setSearch}/>
       </div>
     </main>
+
   </>
   </>
   )
    }
+
+
+  </div>
+  </>
+  )
+  }
 
