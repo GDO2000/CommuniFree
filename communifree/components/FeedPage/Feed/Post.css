@@ -41,6 +41,7 @@
     padding-top: 10px;
     background-color: var(--light-colour);
     border-radius: 5px;
+    width: 440px;
 }
 .img-container{
     width: 250px;
