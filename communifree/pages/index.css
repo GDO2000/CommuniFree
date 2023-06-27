@@ -1,28 +1,51 @@
-:root {
-    --lightgreen-colour: #82ad8b;
-    --light-colour: #F8F1FF;
-    --dark-colour: #061301;
-    --accent-colour: #FF9B42;
-    --darkgreen-colour: #0B5351;
-  }
+/* :root {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
 
 
-main {
-    margin-left: 2%;
-    margin-right: 2%;
+
+
+#Auth {
+width: 25vw;
+padding-top: 100px;
+margin-left: 2.5%;
+}
+
+#signIn {
+
+background-image: url('/backgroundimage.jpg'); 
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100vw;
+height: 100vh;
+position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+.footer-container {
+    background-color: #0b5351;
+    color: white;
+    padding: 20px;
+    position:absolute;
+    left: 0;
+    bottom: -250px;
+    width: 100%;
+    height:24%;
     display: flex;
-    flex-direction: row;
-    position:relative;
-    z-index: 1;
+    align-items:center;
+    margin-top: 50px;
+  }
+  
 
-}
 
-header{
-    position:relative;
-    z-index: 2;
-}
-
-.buttonAndFeed{
-    width: 85%;
-    margin-top: 10%;
-}

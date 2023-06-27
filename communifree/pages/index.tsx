@@ -5,7 +5,7 @@ import { Auth } from '@supabase/auth-ui-react'
 import {  ThemeSupa } from '@supabase/auth-ui-shared'
 import { useSession} from '../backend/db/session'
 import { useRouter } from 'next/router';
-import  './signin.css'
+import  './index.css'
 import Image from "next/image"
 import Head from 'next/head';
 
@@ -27,18 +27,20 @@ export default function SignIn() {
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
       </Head>
              <div id = 'signIn'>
+             
                  <div id = 'header'> 
 
                  <Image src='/logosign.png' alt = "Communifree logo" id="logo" width="200" height="100"/>
-                 
-                 </div>
+                </div>
                  <div id="Auth">
                  <h1> Join the CommuniFree family!</h1>
-                 
                     <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
-                 </div>
-                 <div id = 'footer'></div>
+                 </div> 
+                 
              </div>
+             <div className= "footer-container">
+             <h2> Our Mission..</h2>
+             </div>   
              </>
                             
   )} else {

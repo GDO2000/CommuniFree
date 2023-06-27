@@ -1,6 +1,6 @@
 import Next from "next"; 
 import Image from 'next/image'
-import './index.css'
+import './feedpage.css'
 import CreatePostButton from "../components/FeedPage/CreateNewPostButton/CreateNewPostButton";
 import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
 import { Dispatch, SetStateAction } from 'react';
