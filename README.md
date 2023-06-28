@@ -31,8 +31,17 @@ Together we can make a meaningful impact in our society.
 ## Project description
 
 ### The Problem
-Through extensive brainstorming and discussion as a group, we identified food waste and the cost of living crisis as two real-world problems that we would like to adress with our app.
+Through extensive brainstorming and discussion as a group, we identified food waste and the cost of living crisis as two real-world problems that we would like to address with our app.
+
+We conducted user research to investigate the problem of food waste, and found that two-thirds of respondents reported throwing away good quality food at least once a week because they'd bought too much. Three-quarters of respondents indicated that they would be interested in an app that would allow them to give away such unwanted food items, and 40% reported that they were very concerned about the level of food waste across the country. In fact, all of our respondents indicated some degree of concern over this issue.
+
+We felt that during a cost of living crisis, facilitating the sharing of free food within the community would also help to reduce the financial burden being felt by so many.
+
+Furthermore, as many communities are still feeling the impact of social isolation imposed during the pandemic, we hoped another benefit of a food sharing app would be to reconnect people with those living in their local area.
+
 ### App features
+
+
 ### Going forward... 🚀
 
 <br/>
