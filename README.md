@@ -9,9 +9,10 @@ Final project BC14
 
 ## List of Contents
 
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 2. [Tech Stack](#tech-stack)
-3. [The Team](#The-Team)
+3. [The Team](#the-team)
+4. [Getting Started](#getting-started)
 
 
 <br/>
@@ -37,7 +38,7 @@ Together we can make a meaningful impact in our society.
 
 <br/>
 
-## **_Tech Stack🖥️_**
+## **Tech Stack 🖥️**
 
 
 ![Alt text](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -51,9 +52,9 @@ Together we can make a meaningful impact in our society.
 
 ---
 
-<br />
+<br/>
 
-## **_The Team_**
+## **The Team**
 
 We are the Boat Rockers!
 
@@ -67,3 +68,22 @@ We are the Boat Rockers!
 <br/>
 
 ---
+
+<br/>
+
+## **_Getting started_**
+
+Git clone the front-end repository by pasting the following into your terminal:
+
+```bash
+
+git clone https://github.com/GDO2000/CommuniFree
+
+```
+Remember to navigate to the correct folder: communifree
+
+Install all necessary dependencies by running the following command in the terminal:
+
+```bash
+  npm i
+```
