@@ -36,7 +36,7 @@ export default function SignIn() {
                 </div>
                  <div id="Auth">
                  <h1> Join the CommuniFree family!</h1>
-                    <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
+                    <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />
                  </div> 
                  
              </div>
