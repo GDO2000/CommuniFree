@@ -1,5 +1,12 @@
-# CommuniFree
-Final project BC14
+# 👋 Welcome to CommuniFree- the food sharing app! 🥕
+
+We are the Boat Rockers: a dynamic group of six full-stack developers from the prestigious School of Code. We embarked on an exciting five-week group project that resulted in the creation of our innovative and cutting-edge app, Communifree.
+
+At Boat Rockers, we aim to address pressing societal issues. Our app tackles two significant problems: the wastage of excess food and the financial struggles faced by many during the cost of living crisis. 
+
+We aim to foster community engagement, promote environmental responsibility, and champion kindness and mental well-being. In short, we strive to make a lasting difference. 
+
+Together we can make a meaningful impact in our society.
 
 <br />
 
@@ -21,16 +28,12 @@ Final project BC14
 
 <br/>
 
-## Introduction 🥕	
+## Project description
 
-
-Welcome to our GitHub page! We are the Boat Rockers': a dynamic group of six full stack developers from the prestigious School of Code. We embarked on an exciting five-week group project that resulted in the creation of our innovative and cutting-edge app, Communifree.
-
-At Boat Rockers, we aim to address pressing societal issues. Our app tackles two significant problems: the wastage of excess food and the financial struggles faced by many during the cost of living crisis. 
-
-By fostering community engagement, promoting environmental responsibility, facilitating COVID recovery, and championing kindness and mental well-being, we strive to make a lasting difference.
-
-Together we can make a meaningful impact in our society.
+### The Problem
+Through extensive brainstorming and discussion as a group, we identified food waste and the cost of living crisis as two real-world problems that we would like to adress with our app.
+### App features
+### Going forward... 🚀
 
 <br/>
 
@@ -87,3 +90,11 @@ Install all necessary dependencies by running the following command in the termi
 ```bash
   npm i
 ```
+
+Then run:
+
+```bash
+  npm run dev
+```
+Click on the localhost3000 link in the terminal and the page should open in the browser.
+
