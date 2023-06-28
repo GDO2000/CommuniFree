@@ -16,7 +16,7 @@ Together we can make a meaningful impact in our society.
 
 ## List of Contents
 
-1. [Introduction](#introduction)
+1. [Project description](#project-description)
 2. [Tech Stack](#tech-stack)
 3. [The Team](#the-team)
 4. [Getting Started](#getting-started)
@@ -28,7 +28,7 @@ Together we can make a meaningful impact in our society.
 
 <br/>
 
-## Project description
+## **Project description**
 
 ### The Problem
 Through extensive brainstorming and discussion as a group, we identified food waste and the cost of living crisis as two real-world problems that we would like to address with our app.
