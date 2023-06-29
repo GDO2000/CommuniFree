@@ -45,7 +45,7 @@ input:focus::placeholder {
   .search-bar {
     width: 100%;
     max-width: 800px;
-    min-width: 200px;
+    min-width: 170px;
     /* height:30px; */
     margin-right: 10px;
     border: none;

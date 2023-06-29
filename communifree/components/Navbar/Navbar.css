@@ -127,7 +127,7 @@ li {
     width: 22.5vw;
 }
 
- @media (max-width: 1000px) {
+ @media only screen and (max-width: 1000px) {
   .navbar {
     display: flex; 
     position: fixed;
@@ -182,7 +182,7 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 7.5vw;
+    width: 60vw;
     justify-content: space-between;
   }
   
@@ -190,7 +190,7 @@ li {
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 68vw;
+      width: 35vw;
   }
   
 } 
