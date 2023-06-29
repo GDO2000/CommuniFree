@@ -121,7 +121,7 @@ export default function Modal({ setOpenModal, handleDeleteClick }:ModalProps) {
             <textarea placeholder="e.g. Ready for collection" rows= {5} cols= {104} onChange={handleDescriptionChange} /><br></br>
             
             <label>Please provide an image url for your product:</label>
-            <input className="createpostinput" placeholder="http://your_url_here" type='file' onChange={handleImageChange} /><br></br>
+            <input className="createpostinput" placeholder="http://your_url_here"  onChange={handleImageChange} /><br></br>
             
             <label htmlFor= "condition">What is the condition of your product:</label> <br></br>
             <select  onChange={handleConditionChange} name = "condition" id = "condition">
