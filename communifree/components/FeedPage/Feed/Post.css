@@ -1,4 +1,5 @@
 .post{
+    width: 16em;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
