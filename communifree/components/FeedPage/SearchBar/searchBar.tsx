@@ -1,9 +1,9 @@
-import Next from 'next';
-import React from 'react';
-import { useState, useEffect } from 'react';
+import Next from "next";
+import React from "react";
+import { useState, useEffect } from "react";
 import "./SearchBar.css";
-import Image from 'next/image';
-import supabase from '../../../utils/supabaseClient'
+import Image from "next/image";
+import supabase from "../../../utils/supabaseClient";
 
 type postObject = {
   title: string;
@@ -17,17 +17,13 @@ interface Post {
   [key: string]: string | number; // Adjust the types based on your actual data structure
 }
 
-export default function SearchBar({setSearch, handleClick,setPosts}) {
+export default function SearchBar({ setSearch, handleClick, setPosts }) {
   const [fetchError, setFetchError] = useState<string | null>("");
-
-  
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data, error } = await supabase
-          .from("post_info")
-          .select();
+        const { data, error } = await supabase.from("post_info").select();
 
         if (error) {
           throw new Error("Could not fetch any posts");
@@ -44,8 +40,6 @@ export default function SearchBar({setSearch, handleClick,setPosts}) {
     fetchPosts();
   }, []);
 
-  
-
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setSearch(e.target.value);
   }
@@ -59,7 +53,8 @@ export default function SearchBar({setSearch, handleClick,setPosts}) {
           onChange={handleChange}
         />
         <button className="search-button" onClick={handleClick}>
-          <img className='search-button'
+          <img
+            className="search-button"
             src="/MagGlass.png"
             alt="magnifying glass image"
           />

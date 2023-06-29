@@ -12,10 +12,9 @@
 }
 
 .postImage {
-    width: 250px;
-    align-self:center;
+    width: 140%;
+    justify-self:center;
     border-radius: 10px;
-    height: 200px;
 }
 
 .postTitle{
@@ -30,9 +29,8 @@
 
 .postDescription{
     font-size: 15px;
-    font-weight:300
+    font-weight:300;
 }
-
 
 .modal-content2{
     padding-left: 20px;
@@ -43,6 +41,7 @@
     border-radius: 5px;
     width: 440px;
 }
+
 .img-container{
     width: 250px;
     height: 200px;
@@ -59,15 +58,12 @@
     object-fit: cover;
 }
 
-@media (max-width: 600px) {
-
-}
-
 .closeButton {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
-  }
+}
+
 .closeButton button {
     background: none; /* Remove the background color */
     border: none; /* Remove the border */
