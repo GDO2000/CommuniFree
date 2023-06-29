@@ -49,7 +49,7 @@ export default function SignIn() {
                           <p>As our name suggests, our goal is to build community connections in your local area. We are stronger together! </p>
                       </div>
                       <div id="cash">
-                          <Image src= '/cash.png' width="120" height="120" alt="cash logo"></Image>
+                          <Image src= '/CASH.png' width="120" height="120" alt="cash logo"></Image>
                           <h3>Save your cash!</h3>
                           <p>The produce you'll find on the CommuniFree app is free, and we're commited to keeping it that way!</p>
                       </div>
