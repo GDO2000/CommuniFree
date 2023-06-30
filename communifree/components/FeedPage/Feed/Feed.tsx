@@ -1,51 +1,44 @@
 import Post from "./Post";
-import './Feed.css';
-import {useState, useEffect} from 'react';
+import "./Feed.css";
+import { useState, useEffect } from "react";
 import React from "react";
-import supabase from '../../../utils/supabaseClient'
+import supabase from "../../../utils/supabaseClient";
 
+export default function Feed({ setSearch, handleClick, posts, setPosts }) {
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
-export default function Feed ({setSearch, handleClick,posts,setPosts}) {
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const { data, error } = await supabase.from("post_info").select();
 
+      if (error) {
+        setFetchError("Could not fetch any posts");
+        setPosts([]);
+        console.log(error);
+      }
 
-const [fetchError, setFetchError] = useState<string | null>(null);
+      if (data) {
+        console.log(data);
+        setPosts(data);
+        console.log(posts);
 
+        setFetchError(null);
+      }
+    };
 
-useEffect(() => {
-    const fetchPosts = async() => {
-    const {data, error} = await supabase
-    .from('post_info')
-    .select()
+    fetchPosts();
+  }, []);
 
-    if (error){
-        setFetchError('Could not fetch any posts')
-        setPosts([])
-        console.log(error)
-    }
-
-    if (data){
-        console.log(data)
-        setPosts(data)
-        console.log(posts)
-
-        setFetchError(null)
-    }
-}
-
-fetchPosts();
-
-}, [] );
-
-     return (
+  return (
     <>
-        {fetchError && (<p>{fetchError}</p>)}
-        {posts && (
-            <div className= 'postGrid'>
-                {posts.map(post => (
-                 <Post key={post.post_id} post={post}/>   
-                ))}
-            </div>
-        )}
+      {fetchError && <p>{fetchError}</p>}
+      {posts && (
+        <div className="postGrid">
+          {posts.map((post) => (
+            <Post key={post.post_id} post={post} />
+          ))}
+        </div>
+      )}
     </>
-    )
+  );
 }
