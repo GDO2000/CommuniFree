@@ -16,6 +16,8 @@ export default function SignIn() {
     return (
       <>
         <Head>
+          <title>CommuniFree</title>
+           <link rel="shortcut icon" href="/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
